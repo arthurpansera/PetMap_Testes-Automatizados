@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    cadastro_resources.robot
+Resource    cadastro_cidadao_resources.robot
 Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
