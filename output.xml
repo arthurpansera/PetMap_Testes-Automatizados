@@ -1,196 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-10-17T20:22:43.683015" rpa="false" schemaversion="5">
-<suite id="s1" name="Cadastro Cidadao Testes" source="c:\Users\arthu\OneDrive - Grupo Marista\4º Periodo\Verificacao e Validacao\Somativa - PjBL RA03\PetMap_Testes-Automatizados\cadastro_cidadao_testes.robot">
-<test id="s1-t1" name="CT2 - Cadastrar cidadão com e-mail já vinculado a outra conta" line="15">
-<kw name="Abrir o navegador" owner="cadastro_cidadao_resources" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-10-17T22:18:52.763857" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro Ong Testes" source="c:\Users\arthu\OneDrive - Grupo Marista\4º Periodo\Verificacao e Validacao\Somativa - PjBL RA03\PetMap_Testes-Automatizados\cadastro_ong_testes.robot">
+<test id="s1-t1" name="CT3 - Editar e-mail após cadastro" line="7">
+<kw name="Abrir o navegador" owner="cadastro_ong_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:43.852570" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<msg time="2025-10-17T22:18:52.940484" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-17T20:22:43.852316" elapsed="1.507357"/>
+<status status="PASS" start="2025-10-17T22:18:52.940231" elapsed="1.417822"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.360225" elapsed="0.033251"/>
+<status status="PASS" start="2025-10-17T22:18:54.358358" elapsed="0.034284"/>
 </kw>
-<status status="PASS" start="2025-10-17T20:22:43.851786" elapsed="1.541940"/>
+<status status="PASS" start="2025-10-17T22:18:52.939407" elapsed="1.453499"/>
 </kw>
-<kw name="Acessar página de cadastro" owner="cadastro_cidadao_resources">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${BOTAO_ENTRAR}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.394715" elapsed="0.010930"/>
-</kw>
+<kw name="Realizar login como ONG" owner="cadastro_ong_resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:45.406490" level="INFO">Clicking element 'css=a.btn'.</msg>
+<msg time="2025-10-17T22:18:54.394188" level="INFO">Clicking element 'css=a.btn'.</msg>
 <arg>${BOTAO_ENTRAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.406049" elapsed="0.132846"/>
+<status status="PASS" start="2025-10-17T22:18:54.393859" elapsed="0.142456"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${BOTAO_CADASTRO}</arg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
 <arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.539317" elapsed="0.019128"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-17T22:18:54.536701" elapsed="0.029448"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-17T22:18:54.566998" level="INFO">Typing text 'ongteste@gmail.com' into text field 'id=email'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${LOGIN_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T22:18:54.566547" elapsed="0.115238"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-17T22:18:54.682600" level="INFO">Typing text 'Ong@1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${LOGIN_SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T22:18:54.682160" elapsed="0.059980"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:45.559341" level="INFO">Clicking element 'css=a.show-register'.</msg>
-<arg>${BOTAO_CADASTRO}</arg>
+<msg time="2025-10-17T22:18:54.742842" level="INFO">Clicking element 'css=input.login-btn'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.558867" elapsed="0.058793"/>
+<status status="PASS" start="2025-10-17T22:18:54.742464" elapsed="0.156293"/>
 </kw>
-<status status="PASS" start="2025-10-17T20:22:45.394330" elapsed="0.223657"/>
+<status status="PASS" start="2025-10-17T22:18:54.393539" elapsed="0.505402"/>
 </kw>
-<kw name="Selecionar opção de &quot;Cidadão&quot;" owner="cadastro_cidadao_resources">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${BOTAO_CIDADAO}</arg>
+<kw name="Acessar página de perfil" owner="cadastro_ong_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_PERFIL}</arg>
 <arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.618811" elapsed="0.011187"/>
-</kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:45.630498" level="INFO">Clicking link 'link=Cidadão'.</msg>
-<arg>${BOTAO_CIDADAO}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.630212" elapsed="0.113072"/>
-</kw>
-<status status="PASS" start="2025-10-17T20:22:45.618503" elapsed="0.125092"/>
-</kw>
-<kw name="Preencher dados do formulário de cadastro e informar um e-mail já cadastrado no campo de &quot;E-mail&quot;" owner="cadastro_cidadao_resources">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${NAME}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.744829" elapsed="0.013586"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:45.759215" level="INFO">Typing text 'João Silva' into text field 'id=name'.</msg>
-<arg>${NAME}</arg>
-<arg>${CT2_NAME_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.758800" elapsed="0.102758"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:45.862364" level="INFO">Typing text '987.654.321-00' into text field 'id=cpf'.</msg>
-<arg>${CPF}</arg>
-<arg>${CT2_CPF_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.861933" elapsed="0.091714"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:45.954440" level="INFO">Typing text '02/02/1985' into text field 'id=birthYear'.</msg>
-<arg>${BIRTHYEAR}</arg>
-<arg>${CT2_BIRTHYEAR_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:45.953989" elapsed="0.084384"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.039033" level="INFO">Typing text '(41) 98765-4321' into text field 'id=telephone'.</msg>
-<arg>${TELEPHONE}</arg>
-<arg>${CT2_TELEPHONE_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.038603" elapsed="0.071351"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.110471" level="INFO">Typing text 'joao@gmail.com' into text field 'id=email'.</msg>
-<arg>${EMAIL}</arg>
-<arg>${CT2_EMAIL_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.110195" elapsed="0.100865"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.211561" level="INFO">Typing text 'Senha@5678' into text field 'id=password'.</msg>
-<arg>${PASSWORD}</arg>
-<arg>${CT2_PASSWORD_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.211285" elapsed="0.054275"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.266359" level="INFO">Typing text 'Senha@5678' into text field 'id=confirm-pass'.</msg>
-<arg>${CONFIRM_PASS}</arg>
-<arg>${CT2_PASSWORD_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.265968" elapsed="0.059739"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.326421" level="INFO">Typing text '22050-031' into text field 'id=CEP'.</msg>
-<arg>${CEP}</arg>
-<arg>${CT2_CEP_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.326034" elapsed="0.062262"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.389328" level="INFO">Typing text '456' into text field 'id=num'.</msg>
-<arg>${NUM}</arg>
-<arg>${CT2_NUM_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.388520" elapsed="0.064168"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:46.453425" level="INFO">Typing text 'Casa' into text field 'id=complement'.</msg>
-<arg>${COMPLEMENT}</arg>
-<arg>${CT2_COMPLEMENT_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.453022" elapsed="0.084108"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-17T20:22:48.538252" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-17T20:22:46.537473" elapsed="2.001093"/>
-</kw>
-<status status="PASS" start="2025-10-17T20:22:45.744308" elapsed="2.794441"/>
-</kw>
-<kw name="Clicar no botão &quot;Cadastrar-se&quot;" owner="cadastro_cidadao_resources">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${BOTAO_CADASTRO_CIDADAO}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-17T20:22:48.539380" elapsed="0.007135"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-17T22:18:54.899746" elapsed="0.015864"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:48.547350" level="INFO">Clicking element 'css=input.register-btn'.</msg>
-<arg>${BOTAO_CADASTRO_CIDADAO}</arg>
+<msg time="2025-10-17T22:18:54.916389" level="INFO">Clicking element 'css=a.profile-image'.</msg>
+<arg>${BOTAO_PERFIL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-17T20:22:48.546999" elapsed="0.147291"/>
+<status status="PASS" start="2025-10-17T22:18:54.915997" elapsed="0.149223"/>
 </kw>
-<status status="PASS" start="2025-10-17T20:22:48.539136" elapsed="0.155417"/>
+<status status="PASS" start="2025-10-17T22:18:54.899466" elapsed="0.166043"/>
 </kw>
-<kw name="Fechar o navegador" owner="cadastro_cidadao_resources" type="TEARDOWN">
+<kw name="Clicar no botão &quot;Editar Informações&quot;" owner="cadastro_ong_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_EDITAR_INFORMACOES}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.066668" elapsed="0.023584"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-17T22:18:55.090940" level="INFO">Clicking element 'css=a.profile-edit'.</msg>
+<arg>${BOTAO_EDITAR_INFORMACOES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.090596" elapsed="0.075262"/>
+</kw>
+<status status="PASS" start="2025-10-17T22:18:55.066207" elapsed="0.099906"/>
+</kw>
+<kw name="Editar o e-mail" owner="cadastro_ong_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL_CAMPO}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.167237" elapsed="0.016706"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${EMAIL_CAMPO}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.184276" elapsed="0.026947"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-17T22:18:55.212052" level="INFO">Typing text 'ongteste_novo@gmail.com' into text field 'css=#editModal input[type="email"]'.</msg>
+<arg>${EMAIL_CAMPO}</arg>
+<arg>${NOVO_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.211693" elapsed="0.090579"/>
+</kw>
+<status status="PASS" start="2025-10-17T22:18:55.166773" elapsed="0.135732"/>
+</kw>
+<kw name="Clicar no botão &quot;Salvar Alterações&quot;" owner="cadastro_ong_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_SALVAR_ALTERACOES}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.303409" elapsed="0.013708"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-17T22:18:55.317740" level="INFO">Clicking element 'css=#editModal button.profile-save'.</msg>
+<arg>${BOTAO_SALVAR_ALTERACOES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-17T22:18:55.317424" elapsed="0.142545"/>
+</kw>
+<status status="PASS" start="2025-10-17T22:18:55.303102" elapsed="0.157104"/>
+</kw>
+<kw name="Fechar o navegador" owner="cadastro_ong_resources" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-17T20:22:50.697046" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-17T22:18:57.461992" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-17T20:22:48.695903" elapsed="2.001361"/>
+<status status="PASS" start="2025-10-17T22:18:55.461216" elapsed="2.001098"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-17T20:22:50.910841" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-17T22:18:57.628394" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-17T20:22:50.697412" elapsed="0.213779"/>
+<status status="PASS" start="2025-10-17T22:18:57.462565" elapsed="0.166119"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-17T20:22:50.911408" elapsed="2.117653"/>
+<status status="PASS" start="2025-10-17T22:18:57.628872" elapsed="2.098754"/>
 </kw>
-<status status="PASS" start="2025-10-17T20:22:48.695433" elapsed="4.333808"/>
+<status status="PASS" start="2025-10-17T22:18:55.460887" elapsed="4.266903"/>
 </kw>
-<doc>Teste para verificar o comportamento do sistema ao tentar cadastrar um cidadão com e-mail já vinculado a outra conta.</doc>
-<tag>cadastrar_cidadao_com_email_ja_vinculado</tag>
-<status status="PASS" start="2025-10-17T20:22:43.850973" elapsed="9.178861"/>
+<doc>Teste para verificar o comportamento do sistema ao tentar editar o e-mail de uma ONG após o cadastro.</doc>
+<tag>editar_email_ong</tag>
+<status status="PASS" start="2025-10-17T22:18:52.938579" elapsed="6.789461"/>
 </test>
-<status status="PASS" start="2025-10-17T20:22:43.686666" elapsed="9.344252"/>
+<status status="PASS" start="2025-10-17T22:18:52.767228" elapsed="6.961563"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">cadastrar_cidadao_com_email_ja_vinculado</stat>
+<stat pass="1" fail="0" skip="0">editar_email_ong</stat>
 </tag>
 <suite>
-<stat name="Cadastro Cidadao Testes" id="s1" pass="1" fail="0" skip="0">Cadastro Cidadao Testes</stat>
+<stat name="Cadastro Ong Testes" id="s1" pass="1" fail="0" skip="0">Cadastro Ong Testes</stat>
 </suite>
 </statistics>
 <errors>
