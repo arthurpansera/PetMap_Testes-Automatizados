@@ -55,10 +55,14 @@ Acessar página de cadastro
     Click Element    ${BOTAO_ENTRAR}
     Wait Until Page Contains Element    ${BOTAO_CADASTRO}    timeout=10s
     Click Element    ${BOTAO_CADASTRO}
+    Sleep    2s
+    Capture PageScreenshot
 
 Selecionar opção de "Cidadão"
     Wait Until Page Contains Element    ${BOTAO_CIDADAO}    timeout=10s
     Click Link    ${BOTAO_CIDADAO}
+    Sleep    2s
+    Capture PageScreenshot
 
 Preencher dados do formulário de cadastro, mas deixar o campo "Nome" em branco
     Wait Until Page Contains Element    ${NAME}    timeout=10s
@@ -73,6 +77,7 @@ Preencher dados do formulário de cadastro, mas deixar o campo "Nome" em branco
     Input Text    ${NUM}    ${CT1_NUM_VALOR}
     Input Text    ${COMPLEMENT}    ${CT1_COMPLEMENT_VALOR}
     Sleep    2s
+    Capture PageScreenshot
 
 Preencher dados do formulário de cadastro e informar um e-mail já cadastrado no campo de "E-mail"
     Wait Until Page Contains Element    ${NAME}    timeout=10s
@@ -87,12 +92,19 @@ Preencher dados do formulário de cadastro e informar um e-mail já cadastrado n
     Input Text    ${NUM}    ${CT2_NUM_VALOR}
     Input Text    ${COMPLEMENT}    ${CT2_COMPLEMENT_VALOR}
     Sleep    2s
+    Capture PageScreenshot
 
 Clicar no botão "Cadastrar-se"
     Wait Until Page Contains Element    ${BOTAO_CADASTRO_CIDADAO}    timeout=10s
     Click Element    ${BOTAO_CADASTRO_CIDADAO}
 
-Fechar o navegador
+Verificar mensagem de erro indicando que o campo "Nome" é obrigatório
     Sleep    2s
     Capture PageScreenshot
+
+Verificar mensagem de erro indicando que o e-mail já está vinculado a outra conta
+    Sleep    2s
+    Capture PageScreenshot
+
+Fechar o navegador
     Close Browser

@@ -24,11 +24,15 @@ Realizar login como moderador
     Wait Until Element Is Visible    ${EMAIL_INPUT}    timeout=10s
     Input Text    ${EMAIL_INPUT}    ${LOGIN_EMAIL}
     Input Text    ${PASSWORD_INPUT}    ${LOGIN_SENHA}
+    Sleep    2s
+    Capture PageScreenshot
     Click Element    ${BOTAO_LOGIN}
 
 Acessar página de perfil
     Wait Until Element Is Visible    ${BOTAO_PERFIL}    timeout=10s
     Click Element    ${BOTAO_PERFIL}
+    Sleep    2s
+    Capture PageScreenshot
 
 Clicar no botão "Excluir Conta"
     Wait Until Element Is Visible    ${BOTAO_EXCLUIR_CONTA}    timeout=10s
@@ -40,8 +44,13 @@ Clicar no botão de confirmação "Sim, excluir"
     Capture PageScreenshot
     Sleep    2s
     Click Element    ${BOTAO_CONFIRMAR_EXCLUSAO}
-
-Fechar o navegador
     Sleep    1s
     Capture PageScreenshot
+
+Verificar se retorna para a página de login
+    Wait Until Element Is Visible    ${BOTAO_LOGIN}    timeout=10s
+    Sleep    1s
+    Capture PageScreenshot
+
+Fechar o navegador
     Close Browser

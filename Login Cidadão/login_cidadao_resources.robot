@@ -34,7 +34,13 @@ Informar a senha
 Clicar no botão "Login"
     Click Element    ${BOTAO_LOGIN}
 
-Fechar o navegador
+Verificar mensagem de erro indicando que a conta está banida
     Sleep    2s
     Capture PageScreenshot
+
+Verificar mensagem de erro indicando que o e-mail não está cadastrado
+    Sleep    2s
+    Capture PageScreenshot
+
+Fechar o navegador
     Close Browser

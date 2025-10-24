@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation    Teste automatizado para o cadastro de ONG no sistema.
 Resource    cadastro_ong_resources.robot
 Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
@@ -12,3 +13,4 @@ CT3 - Editar e-mail após cadastro
     Clicar no botão "Editar Informações"
     Editar o e-mail
     Clicar no botão "Salvar Alterações"
+    Verificar mensagem de sucesso indicando que o e-mail foi atualizado com sucesso

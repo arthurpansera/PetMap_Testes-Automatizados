@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation    Testes automatizados para o cadastro de cidadãos no sistema.
 Resource    cadastro_cidadao_resources.robot
 Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
@@ -11,6 +12,7 @@ CT1 - Cadastrar cidadão sem nome
     Selecionar opção de "Cidadão"
     Preencher dados do formulário de cadastro, mas deixar o campo "Nome" em branco
     Clicar no botão "Cadastrar-se"
+    Verificar mensagem de erro indicando que o campo "Nome" é obrigatório
 
 CT2 - Cadastrar cidadão com e-mail já vinculado a outra conta
     [Documentation]    Teste para verificar o comportamento do sistema ao tentar cadastrar um cidadão com e-mail já vinculado a outra conta.
@@ -19,3 +21,4 @@ CT2 - Cadastrar cidadão com e-mail já vinculado a outra conta
     Selecionar opção de "Cidadão"
     Preencher dados do formulário de cadastro e informar um e-mail já cadastrado no campo de "E-mail"
     Clicar no botão "Cadastrar-se"
+    Verificar mensagem de erro indicando que o e-mail já está vinculado a outra conta
