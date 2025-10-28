@@ -1,11 +1,11 @@
 *** Settings ***
-Documentation    Testes automaizados 
+Documentation    Testes automatizados para a publicação de casos de animal perdido no sistema.
 Resource    publicacao_animal_perdido_resources.robot    
 Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT7 - Manter publicação de caso de animal perdido
+CT7 - Realizar publicação de caso de animal perdido
     [Documentation]    Teste para verificar o fluxo de realizar uma publicação de caso de animal perdido no sistema.
     [Tags]   publicacao_animal_perdido
     Realizar login
