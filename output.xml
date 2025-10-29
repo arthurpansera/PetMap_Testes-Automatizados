@@ -1,151 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-10-28T16:23:04.423572" rpa="false" schemaversion="5">
-<suite id="s1" name="Visualizar Publicacoes Outro Usuario Testes" source="c:\Users\stefa\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Visualizar Publicação no Perfil de Outro Usuário\visualizar_publicacoes_outro_usuario_testes.robot">
-<test id="s1-t1" name="Visualizar Publicacoes No Perfil De Outro Usuario" line="8">
-<kw name="Abrir Navegador" owner="visualizar_publicacoes_outro_usuario_resources" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-10-29T13:10:33.005571" rpa="false" schemaversion="5">
+<suite id="s1" name="Animais Perdidos Teste" source="c:\Users\Jean\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Visualizar lista de publicações\animais_perdidos_teste.robot">
+<test id="s1-t1" name="CT20 - Acessar página de animais perdidos e verificar mensagem de ausência de publicações" line="8">
+<kw name="Abrir o navegador" owner="animais_perdidos_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:05.111524" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
-<arg>${URL_BASE}</arg>
+<msg time="2025-10-29T13:10:33.199417" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-28T16:23:05.110790" elapsed="3.871063"/>
+<status status="PASS" start="2025-10-29T13:10:33.199164" elapsed="1.396737"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-28T16:23:08.982704" elapsed="0.049722"/>
+<status status="PASS" start="2025-10-29T13:10:34.596349" elapsed="0.033366"/>
 </kw>
-<status status="PASS" start="2025-10-28T16:23:05.108743" elapsed="3.924312"/>
+<status status="PASS" start="2025-10-29T13:10:33.198634" elapsed="1.431376"/>
 </kw>
-<kw name="Acessar Página Principal" owner="visualizar_publicacoes_outro_usuario_resources">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:09.038455" level="INFO">Opening url 'http://localhost/PetMap/PROJETO/'</msg>
-<arg>${URL_BASE}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-10-28T16:23:09.037613" elapsed="0.113768"/>
-</kw>
+<kw name="Acessar página principal" owner="animais_perdidos_resources">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${BARRA_PESQUISA}</arg>
-<arg>timeout=${TEMPO_ESPERA}</arg>
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-28T16:23:09.151857" elapsed="0.019354"/>
-</kw>
-<status status="PASS" start="2025-10-28T16:23:09.035963" elapsed="0.135641"/>
-</kw>
-<kw name="Inserir Nome Na Barra De Pesquisa" owner="visualizar_publicacoes_outro_usuario_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BARRA_PESQUISA}</arg>
-<arg>timeout=${TEMPO_ESPERA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-28T16:23:09.173856" elapsed="0.031445"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:09.206765" level="INFO">Typing text 'steh' into text field 'css=form.search-bar input[name="pesquisa"]'.</msg>
-<arg>${BARRA_PESQUISA}</arg>
-<arg>${nome_usuario}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-28T16:23:09.205824" elapsed="0.154544"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:10.083610" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-28T16:23:09.360965" elapsed="0.723197"/>
+<status status="PASS" start="2025-10-29T13:10:34.630885" elapsed="0.008758"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T16:23:12.085633" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-29T13:10:36.640422" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T16:23:10.084592" elapsed="2.001534"/>
+<status status="PASS" start="2025-10-29T13:10:34.640009" elapsed="2.000680"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LISTA_SUGESTOES}</arg>
-<arg>timeout=${TEMPO_ESPERA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-28T16:23:12.086561" elapsed="0.029939"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-29T13:10:36.976293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-29T13:10:36.640874" elapsed="0.335667"/>
 </kw>
-<arg>steh</arg>
-<status status="PASS" start="2025-10-28T16:23:09.172800" elapsed="2.944022"/>
+<status status="PASS" start="2025-10-29T13:10:34.630479" elapsed="2.346213"/>
 </kw>
-<kw name="Selecionar Usuario Da Lista" owner="visualizar_publicacoes_outro_usuario_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ITEM_SUGESTAO}</arg>
-<arg>timeout=${TEMPO_ESPERA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-28T16:23:12.118454" elapsed="0.029479"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:12.148813" level="INFO">Clicking element 'css=div.user-suggestions .suggestion-item:first-child'.</msg>
-<arg>${ITEM_SUGESTAO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-28T16:23:12.148346" elapsed="1.252738"/>
-</kw>
+<kw name="Acessar página &quot;Animais Perdidos&quot;" owner="animais_perdidos_resources">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${AREA_PUBLICACOES}</arg>
-<arg>timeout=${TEMPO_ESPERA}</arg>
+<arg>${LINK_ANIMAIS_PERDIDOS}</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-28T16:23:13.401481" elapsed="0.028649"/>
+<status status="PASS" start="2025-10-29T13:10:36.977694" elapsed="0.009750"/>
 </kw>
-<status status="PASS" start="2025-10-28T16:23:12.117660" elapsed="1.312799"/>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-10-29T13:10:36.987972" level="INFO">Clicking link 'link=Animais Perdidos'.</msg>
+<arg>${LINK_ANIMAIS_PERDIDOS}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-29T13:10:36.987694" elapsed="0.099936"/>
 </kw>
-<kw name="Rolar Ate As Publicacoes" owner="visualizar_publicacoes_outro_usuario_resources">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${AREA_PUBLICACOES}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-10-28T16:23:13.432093" elapsed="0.323469"/>
+<status status="PASS" start="2025-10-29T13:10:36.977222" elapsed="0.110689"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:14.495449" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-28T16:23:13.756166" elapsed="0.739858"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-28T16:23:15.497842" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-28T16:23:14.496487" elapsed="1.001844"/>
-</kw>
-<status status="PASS" start="2025-10-28T16:23:13.431294" elapsed="2.067357"/>
-</kw>
-<kw name="Verificar Exibicao Das Publicacoes" owner="visualizar_publicacoes_outro_usuario_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${AREA_PUBLICACOES}</arg>
-<arg>timeout=${TEMPO_ESPERA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-28T16:23:15.500363" elapsed="0.024043"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:15.538148" level="INFO">Current page contains element 'css=.user-posts'.</msg>
-<arg>${AREA_PUBLICACOES}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-10-28T16:23:15.524906" elapsed="0.013946"/>
+<kw name="Verificar mensagem &quot;Não há publicações disponíveis&quot;" owner="animais_perdidos_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${MENSAGEM_SEM_PUBLICACOES}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-29T13:10:37.089015" elapsed="0.012506"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-10-28T16:23:16.159368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-29T13:10:37.512756" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-10-28T16:23:15.539543" elapsed="0.620228"/>
+<status status="PASS" start="2025-10-29T13:10:37.101781" elapsed="0.411228"/>
 </kw>
-<status status="PASS" start="2025-10-28T16:23:15.499650" elapsed="0.660358"/>
+<status status="PASS" start="2025-10-29T13:10:37.088535" elapsed="0.424593"/>
 </kw>
-<kw name="Fechar o Navegador" owner="visualizar_publicacoes_outro_usuario_resources" type="TEARDOWN">
+<kw name="Fechar o navegador" owner="animais_perdidos_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-28T16:23:16.161735" elapsed="2.411898"/>
+<status status="PASS" start="2025-10-29T13:10:37.514168" elapsed="2.151892"/>
 </kw>
-<status status="PASS" start="2025-10-28T16:23:16.161052" elapsed="2.413426"/>
+<status status="PASS" start="2025-10-29T13:10:37.513726" elapsed="2.152558"/>
 </kw>
-<doc>Verifica se o sistema exibe corretamente as publicações do perfil de outro usuário pesquisado.</doc>
-<status status="PASS" start="2025-10-28T16:23:05.106709" elapsed="13.468417"/>
+<doc>Verifica se a página "Animais Perdidos" é acessada corretamente e exibe a mensagem "Não há publicações disponíveis".</doc>
+<tag>acessar_animais_perdidos</tag>
+<status status="PASS" start="2025-10-29T13:10:33.197986" elapsed="6.468513"/>
 </test>
-<doc>Teste automatizado para verificar a visualização das publicações no perfil de outro usuário.</doc>
-<status status="PASS" start="2025-10-28T16:23:04.434813" elapsed="14.142761"/>
+<doc>Teste automatizado para verificar o acesso à página "Animais Perdidos".</doc>
+<status status="PASS" start="2025-10-29T13:10:33.009441" elapsed="6.657834"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">acessar_animais_perdidos</stat>
 </tag>
 <suite>
-<stat name="Visualizar Publicacoes Outro Usuario Testes" id="s1" pass="1" fail="0" skip="0">Visualizar Publicacoes Outro Usuario Testes</stat>
+<stat name="Animais Perdidos Teste" id="s1" pass="1" fail="0" skip="0">Animais Perdidos Teste</stat>
 </suite>
 </statistics>
 <errors>
