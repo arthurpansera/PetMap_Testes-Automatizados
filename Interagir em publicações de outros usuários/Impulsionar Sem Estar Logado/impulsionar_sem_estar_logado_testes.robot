@@ -5,8 +5,9 @@ Test Setup        Abrir Navegador
 Test Teardown     Fechar o Navegador
 
 *** Test Cases ***
-CT14 - Verificar redirecionamento ao clicar em Impulsionar sem estar logado
+CT18 - Clicar no botão "Impulsionar" em publicação sem estar logado
     [Documentation]    Garante que o sistema redireciona para o login quando o usuário tenta impulsionar sem estar autenticado.
+    [Tags]    impulsionar_sem_estar_logado
     Acessar Página Principal
     Clicar no Botão Impulsionar
     Verificar Redirecionamento Para Login

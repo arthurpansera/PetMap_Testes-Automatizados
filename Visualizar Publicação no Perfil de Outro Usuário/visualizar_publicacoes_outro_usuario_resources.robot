@@ -1,5 +1,4 @@
 *** Settings ***
-Documentation     Recursos e keywords para testes de visualização de publicações no perfil de outro usuário no PetMap.
 Library           SeleniumLibrary
 
 *** Variables ***

@@ -1,5 +1,4 @@
 *** Settings ***
-Documentation     Recursos e keywords para testes de impulsionamento no PetMap
 Library           SeleniumLibrary
 
 *** Variables ***

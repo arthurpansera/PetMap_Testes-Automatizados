@@ -5,8 +5,9 @@ Test Setup        Abrir Navegador
 Test Teardown     Fechar o Navegador
 
 *** Test Cases ***
-CT15 - Visualizar Publicacoes No Perfil De Outro Usuario
+CT19 - Visualizar publicações no perfil de outro usuário
     [Documentation]    Verifica se o sistema exibe corretamente as publicações do perfil de outro usuário pesquisado.
+    [Tags]    visualizar_publicacoes_outro_usuario
     Acessar Página Principal
     Inserir Nome Na Barra De Pesquisa    Steh
     Selecionar Usuario Da Lista

@@ -5,8 +5,9 @@ Test Setup        Abrir Navegador
 Test Teardown     Fechar o Navegador
 
 *** Test Cases ***
-CT13 - Clicar Em Impulsionar Em Publicacao Ja Impulsionada
+CT16 - Clicar no botão "Impulsionar" em publicação que o usuário já impulsionou antes
     [Documentation]    Verifica se o sistema remove o impulso quando o usuário clica novamente em "Impulsionar" em uma publicação já impulsionada.
+    [Tags]    impulsionar_publicacao_ja_impulsionada
     Fazer Login
     Acessar Página Principal
     Clicar no Botão Impulsionar
