@@ -23,7 +23,7 @@ Inserir Nome Na Barra De Pesquisa
     [Arguments]    ${nome_usuario}
     Wait Until Element Is Visible    ${BARRA_PESQUISA}    timeout=${TEMPO_ESPERA}
     Input Text    ${BARRA_PESQUISA}    ${nome_usuario}
-    Capture PageScreenshot
+    Capture Page Screenshot
     Sleep    2s
     Wait Until Element Is Visible    ${LISTA_SUGESTOES}    timeout=${TEMPO_ESPERA}
 
@@ -34,18 +34,13 @@ Selecionar Usuario Da Lista
 
 Rolar Ate As Publicacoes
     Scroll Element Into View    ${AREA_PUBLICACOES}
-    Capture PageScreenshot
+    Capture Page Screenshot
     Sleep    1s
 
 Verificar Exibicao Das Publicacoes
     Wait Until Element Is Visible    ${AREA_PUBLICACOES}    timeout=${TEMPO_ESPERA}
     Page Should Contain Element    ${AREA_PUBLICACOES}
-    Capture PageScreenshot
-
-
-Capturar Evidência
-    [Arguments]    ${nome_arquivo}
-    Capture Page Screenshot    ${nome_arquivo}
+    Capture Page Screenshot
 
 Fechar o Navegador
     Close Browser

@@ -19,7 +19,7 @@ Fechar o navegador
 Acessar página principal
     Wait Until Page Contains Element    ${BOTAO_ENTRAR}    timeout=10s
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Acessar página "Animais Perdidos"
     Wait Until Page Contains Element    ${LINK_ANIMAIS_PERDIDOS}    timeout=10s
@@ -27,4 +27,4 @@ Acessar página "Animais Perdidos"
 
 Verificar mensagem "Não há publicações disponíveis"
     Wait Until Page Contains    ${MENSAGEM_SEM_PUBLICACOES}    timeout=10s
-    Capture PageScreenshot
+    Capture Page Screenshot

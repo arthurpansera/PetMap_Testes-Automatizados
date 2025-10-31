@@ -20,35 +20,35 @@ Abrir o navegador
 Acessar página de login
     Click Element    ${BOTAO_ENTRAR}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Informar o e-mail da conta banida
     Wait Until Element Is Visible    ${EMAIL_INPUT}    timeout=10s
     Input Text    ${EMAIL_INPUT}    ${EMAIL_CONTA_BANIDA}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Informar um e-mail não cadastrado
     Wait Until Element Is Visible    ${EMAIL_INPUT}    timeout=10s
     Input Text    ${EMAIL_INPUT}    ${EMAIL_NAO_CADASTRADO}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Informar a senha
     Input Text    ${PASSWORD_INPUT}    ${SENHA}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Clicar no botão "Login"
     Click Element    ${BOTAO_LOGIN}
 
 Verificar mensagem de erro indicando que a conta está banida
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Verificar mensagem de erro indicando que o e-mail não está cadastrado
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Fechar o navegador
     Close Browser

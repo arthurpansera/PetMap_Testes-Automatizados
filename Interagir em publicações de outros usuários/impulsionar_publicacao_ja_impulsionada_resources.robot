@@ -26,25 +26,25 @@ Fazer Login
     Wait Until Element Is Visible    ${EMAIL_INPUT}    timeout=${TEMPO_ESPERA}
     Input Text    ${EMAIL_INPUT}    ${EMAIL_CONTA}
     Input Text    ${PASSWORD_INPUT}    ${SENHA_CONTA}
-    Capture PageScreenshot
+    Capture Page Screenshot
     Click Element    ${BOTAO_LOGIN}
     
 Acessar Página Principal
     Go To    ${URL_BASE}
     Wait Until Page Contains Element    ${BOTAO_IMPULSIONAR}    timeout=${TEMPO_ESPERA}
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Clicar no Botão Impulsionar
     Scroll Element Into View    ${BOTAO_IMPULSIONAR}
     Wait Until Element Is Visible    ${BOTAO_IMPULSIONAR}    timeout=${TEMPO_ESPERA}
     Click Element    ${BOTAO_IMPULSIONAR}
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Verificar Remocao Do Impulso
     Wait Until Element Is Visible    ${BOTAO_IMPULSIONAR}    timeout=${TEMPO_ESPERA}
     ${classe_atual}=    Get Element Attribute    ${BOTAO_IMPULSIONAR}    class
     Should Not Contain    ${classe_atual}    impulsionado
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Fechar o Navegador
     Close Browser

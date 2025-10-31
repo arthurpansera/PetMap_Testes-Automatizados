@@ -17,20 +17,20 @@ Abrir Navegador
 Acessar Página Principal
     Go To    ${URL_BASE}
     Wait Until Page Contains Element    ${BOTAO_IMPULSIONAR}    timeout=${TEMPO_ESPERA}
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Clicar no Botão Impulsionar
     Scroll Element Into View    ${BOTAO_IMPULSIONAR}
     Wait Until Element Is Visible    ${BOTAO_IMPULSIONAR}    timeout=${TEMPO_ESPERA}
     Click Element    ${BOTAO_IMPULSIONAR}
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Verificar Redirecionamento Para Login
     Wait Until Location Contains    ${URL_LOGIN_CONTEM}    timeout=${TEMPO_ESPERA}
     Location Should Contain         ${URL_LOGIN_CONTEM}
     Wait Until Page Contains Element    ${INDICADOR_LOGIN}    timeout=${TEMPO_ESPERA}
     Page Should Contain Element     ${INDICADOR_LOGIN}
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Fechar o Navegador
     Close Browser

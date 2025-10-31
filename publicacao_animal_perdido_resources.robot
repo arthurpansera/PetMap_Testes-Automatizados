@@ -44,13 +44,13 @@ Realizar login
 
 Acessar página principal
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Clicar no botão de realizar publicação no canto inferior direito
     Wait Until Element Is Visible    ${BOTAO_NOVA_PUBLICACAO}    timeout=10s
     Click Element    ${BOTAO_NOVA_PUBLICACAO}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Preencher o formulário da publicação
     Wait Until Page Contains Element    ${INPUT_TITULO}    timeout=10s
@@ -62,18 +62,18 @@ Preencher o formulário da publicação
     Input Text    ${INPUT_CIDADE}    ${CT7_CIDADE_VALOR}
     Select From List By Value    ${SELECT_ESTADO}    PR
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Clicar no botão "Publicar"
     Click Element    ${BOTAO_PUBLICAR}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Verificar se a publicação foi registrada com sucesso
     Wait Until Element Is Visible    ${BOTAO_OK_AVISO}    timeout=10s
     Click Element    ${BOTAO_OK_AVISO}
     Sleep    2s
-    Capture PageScreenshot
+    Capture Page Screenshot
 
 Fechar o navegador
     Close Browser
