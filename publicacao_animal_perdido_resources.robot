@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    RPA.FileSystem
 
 *** Variables ***
 ${BROWSER}    Chrome
@@ -20,14 +21,16 @@ ${INPUT_BAIRRO}    id=endereco_bairro
 ${INPUT_CIDADE}    id=endereco_cidade
 ${SELECT_ESTADO}    id=state
 ${BOTAO_PUBLICAR}    css=button.create-post
+${BOTAO_OK_AVISO}    css=button.swal2-confirm
+
+${INPUT_FOTOS}    //input[@type="file"]
+${MENSAGEM_ERRO}  O limite de fotos por publicação é 8
 
 ${CT7_TITULO_VALOR}    Cachorro perdido na praça
-${CT7_CONTEUDO_VALOR}    Meu cachorro desapareceu ontem na praça central.
-${CT7_RUA_VALOR}    Rua das Flores
+${CT7_CONTEUDO_VALOR}  Meu cachorro desapareceu ontem na praça central.
+${CT7_RUA_VALOR}       Rua das Flores
 ${CT7_BAIRRO_VALOR}    Centro
 ${CT7_CIDADE_VALOR}    Curitiba
-
-${BOTAO_OK_AVISO}    css=button.swal2-confirm
 
 *** Keywords ***
 Abrir o navegador
@@ -42,15 +45,10 @@ Realizar login
     Input Text    ${PASSWORD_INPUT}    ${SENHA_CONTA}
     Click Element    ${BOTAO_LOGIN}
 
-Acessar página principal
-    Sleep    2s
-    Capture Page Screenshot
-
-Clicar no botão de realizar publicação no canto inferior direito
+Clicar no botão de realizar publicação
     Wait Until Element Is Visible    ${BOTAO_NOVA_PUBLICACAO}    timeout=10s
     Click Element    ${BOTAO_NOVA_PUBLICACAO}
     Sleep    2s
-    Capture Page Screenshot
 
 Preencher o formulário da publicação
     Wait Until Page Contains Element    ${INPUT_TITULO}    timeout=10s
@@ -61,19 +59,18 @@ Preencher o formulário da publicação
     Input Text    ${INPUT_BAIRRO}    ${CT7_BAIRRO_VALOR}
     Input Text    ${INPUT_CIDADE}    ${CT7_CIDADE_VALOR}
     Select From List By Value    ${SELECT_ESTADO}    PR
-    Sleep    2s
-    Capture Page Screenshot
+
+Fazer upload de várias fotos
+    ${imagens}=    List Files In Directory    ${EXECDIR}/resources/imagens/
+    :FOR    ${img}    IN    @{imagens}
+    \    Choose File    ${INPUT_FOTOS}    ${img}
 
 Clicar no botão "Publicar"
     Click Element    ${BOTAO_PUBLICAR}
     Sleep    2s
-    Capture Page Screenshot
 
-Verificar se a publicação foi registrada com sucesso
-    Wait Until Element Is Visible    ${BOTAO_OK_AVISO}    timeout=10s
-    Click Element    ${BOTAO_OK_AVISO}
-    Sleep    2s
-    Capture Page Screenshot
+Verificar se o limite de fotos foi respeitado
+    Wait Until Page Contains    ${MENSAGEM_ERRO}    timeout=5s
 
 Fechar o navegador
     Close Browser
