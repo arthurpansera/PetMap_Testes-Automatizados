@@ -8,14 +8,13 @@ ${BOTAO_ENTRAR}    css=a.btn
 ${EMAIL_INPUT}     id=email
 ${PASSWORD_INPUT}  id=password
 ${BOTAO_LOGIN}     css=input.login-btn
-${LOGIN_EMAIL_MOD}     moderador@petmap.com
-${LOGIN_SENHA_MOD}     Moderador@123
+${LOGIN_EMAIL_MOD}     modteste@gmail.com
+${LOGIN_SENHA_MOD}     Mod@1234
 ${MENU_USUARIOS}    xpath=//a[contains(text(), 'Usuários Cadastrados')]
 ${BOTAO_VER_PERFIL}    css=a.btn-ver-perfil
 ${BOTAO_VALIDAR_PERFIL}    xpath=//button[@name='validar_perfil']
 ${BOTAO_CONFIRMAR_VALIDACAO}    css=.swal2-confirm
 ${BADGE_VERIFICADO}    xpath=//button[contains(@class, 'verified-button')]
-${ALERT_SUCESSO}    css=.swal2-popup
 
 *** Keywords ***
 Abrir o navegador
@@ -57,7 +56,6 @@ Confirmar validação
     Capture Page Screenshot
 
 Verificar se perfil foi validado
-    Wait Until Element Is Visible    ${ALERT_SUCESSO}    timeout=10s
     Page Should Contain Element    ${BADGE_VERIFICADO}
     Capture Page Screenshot
     

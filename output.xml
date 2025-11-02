@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-11-02T16:49:41.206167" rpa="false" schemaversion="5">
+<suite id="s1" name="Publicacao Testes" source="c:\Users\stefa\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Publicação\publicacao_testes.robot">
+<test id="s1-t1" name="CT14 - Não adicionar foto à publicação" line="28">
+<kw name="Abrir o navegador" owner="publicacao_resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:41.941936" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<arg>${URL_BASE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-02T16:49:41.941159" elapsed="2.758734"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-02T16:49:44.700836" elapsed="0.053477"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:41.939445" elapsed="2.815527"/>
+</kw>
+<kw name="Realizar login" owner="publicacao_resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:49:44.757681" elapsed="0.052867"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:44.812120" level="INFO">Clicking element 'css=a.btn'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:44.811196" elapsed="0.308932"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:49:45.120938" elapsed="0.044384"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:45.166349" level="INFO">Typing text 'maria@gmail.com' into text field 'id=email'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL_CONTA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:45.165777" elapsed="0.206901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:45.373928" level="INFO">Typing text 'maria@1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${SENHA_CONTA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:45.373113" elapsed="0.132750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:45.506758" level="INFO">Clicking element 'css=input.login-btn'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:45.506272" elapsed="0.430312"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:44.756407" elapsed="1.180898"/>
+</kw>
+<kw name="Acessar Pagina Principal" owner="publicacao_resource">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:45.940773" level="INFO">Opening url 'http://localhost/PetMap/PROJETO/'</msg>
+<arg>${URL_BASE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-02T16:49:45.940053" elapsed="0.128150"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVA_PUBLICACAO}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.068628" elapsed="0.019331"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:45.938937" elapsed="0.149384"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVA_PUBLICACAO}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.089172" elapsed="0.028771"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:46.119863" level="INFO">Clicking element 'css=button.floating-button'.</msg>
+<arg>${BOTAO_NOVA_PUBLICACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.119028" elapsed="0.151476"/>
+</kw>
+<kw name="Preencher o formulário da publicação sem inserir foto" owner="publicacao_resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_TITULO}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.272745" elapsed="0.026923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:46.300631" level="INFO">Typing text 'Teste sem foto' into text field 'id=titulo'.</msg>
+<arg>${INPUT_TITULO}</arg>
+<arg>${TITULO_VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.300090" elapsed="0.147685"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:46.448985" level="INFO">Typing text 'Publicação criada sem foto.' into text field 'id=conteudo'.</msg>
+<arg>${INPUT_CONTEUDO}</arg>
+<arg>${CONTEUDO_VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.448312" elapsed="0.190691"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:46.640078" level="INFO">Selecting options from selection list 'id=tipo_publicacao' by value animal.</msg>
+<arg>${SELECT_TIPO}</arg>
+<arg>animal</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.639486" elapsed="0.074369"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:46.714928" level="INFO">Typing text 'Rua das Flores' into text field 'id=endereco_rua'.</msg>
+<arg>${INPUT_RUA}</arg>
+<arg>${RUA_VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.714343" elapsed="0.169541"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:46.886410" level="INFO">Typing text 'Centro' into text field 'id=endereco_bairro'.</msg>
+<arg>${INPUT_BAIRRO}</arg>
+<arg>${BAIRRO_VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:46.884483" elapsed="0.176807"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:47.062613" level="INFO">Typing text 'Curitiba' into text field 'id=endereco_cidade'.</msg>
+<arg>${INPUT_CIDADE}</arg>
+<arg>${CIDADE_VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:47.061796" elapsed="0.135963"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:47.198880" level="INFO">Selecting options from selection list 'id=state' by value PR.</msg>
+<arg>${SELECT_ESTADO}</arg>
+<arg>PR</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-11-02T16:49:47.198253" elapsed="0.120984"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:46.271889" elapsed="1.047738"/>
+</kw>
+<kw name="Clicar No Botao Publicar Para Envio" owner="publicacao_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:47.324599" level="INFO">Clicking element 'css=button.create-post'.</msg>
+<arg>${BOTAO_PUBLICAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:47.323935" elapsed="0.351686"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:49:49.677781" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:49:47.676506" elapsed="2.002225"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:50.261322" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-86.png"&gt;&lt;img src="selenium-screenshot-86.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:49:49.679394" elapsed="0.582502"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:47.322755" elapsed="2.939527"/>
+</kw>
+<kw name="Verificar Que Sistema Registrou Publicacao" owner="publicacao_resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ICONE_SUCESSO}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:49:50.264607" elapsed="0.039339"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:50.344335" level="INFO">Element 'css=.swal2-html-container' contains text 'realizada com sucesso'.</msg>
+<arg>${MENSAGEM_SUCESSO_PUBLICACAO}</arg>
+<arg>realizada com sucesso</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-11-02T16:49:50.304628" elapsed="0.040106"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:50.859983" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-87.png"&gt;&lt;img src="selenium-screenshot-87.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:49:50.345105" elapsed="0.515360"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:50.861279" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
+<arg>${BOTAO_OK_SUCESSO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:49:50.860811" elapsed="0.107461"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:49:51.969287" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:49:50.968699" elapsed="1.001078"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:51.980765" level="INFO">${url_atual} = http://localhost/PetMap/PROJETO/index.php</msg>
+<var>${url_atual}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-11-02T16:49:51.970436" elapsed="0.010628"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${url_atual}</arg>
+<arg>PROJETO</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-02T16:49:51.981416" elapsed="0.000477"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:49:52.548065" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-88.png"&gt;&lt;img src="selenium-screenshot-88.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:49:51.982176" elapsed="0.566421"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:50.263462" elapsed="2.285387"/>
+</kw>
+<kw name="Fechar o navegador" owner="publicacao_resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-02T16:49:52.550583" elapsed="2.464578"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:49:52.549871" elapsed="2.465787"/>
+</kw>
+<doc>Teste para verificar o comportamento do sistema ao tentar publicar um caso sem adicionar uma foto.</doc>
+<tag>publicar_sem_foto</tag>
+<status status="PASS" start="2025-11-02T16:49:41.937521" elapsed="13.078787"/>
+</test>
+<doc>Testes automatizados para gerenciamento de publicações no PetMap.</doc>
+<status status="PASS" start="2025-11-02T16:49:41.217652" elapsed="13.800451"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">publicar_sem_foto</stat>
+</tag>
+<suite>
+<stat name="Publicacao Testes" id="s1" pass="1" fail="0" skip="0">Publicacao Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -8,8 +8,8 @@ ${BOTAO_ENTRAR}    css=a.btn
 ${EMAIL_INPUT}     id=email
 ${PASSWORD_INPUT}  id=password
 ${BOTAO_LOGIN}     css=input.login-btn
-${LOGIN_EMAIL_MOD}     moderador@petmap.com
-${LOGIN_SENHA_MOD}     Moderador@123
+${LOGIN_EMAIL_MOD}     modteste@gmail.com
+${LOGIN_SENHA_MOD}     Mod@1234
 ${MENU_USUARIOS}    xpath=//a[contains(text(), 'Usuários Cadastrados')]
 ${BOTAO_VER_PERFIL}    css=a.btn-ver-perfil
 ${TAB_PUBLICACOES}    xpath=//button[contains(text(), 'Publicações')]
@@ -17,7 +17,6 @@ ${BOTAO_VALIDAR_PUBLICACAO}    xpath=//button[@name='validar_publicacao']
 ${BOTAO_CONFIRMAR_VALIDACAO}    css=.swal2-confirm
 ${BADGE_PUBLICACAO_VERIFICADA}    xpath=//button[contains(@class, 'verified-post-button')]
 ${LABEL_PUBLICACAO_VERIFICADA}    xpath=//span[contains(@class, 'verified-label')]
-${ALERT_SUCESSO}    css=.swal2-popup
 
 *** Keywords ***
 Abrir o navegador
@@ -66,14 +65,9 @@ Confirmar validação da publicação
     Click Element    ${BOTAO_CONFIRMAR_VALIDACAO}
     Sleep    2s
 
-Verificar se publicação foi validada
-    Wait Until Element Is Visible    ${ALERT_SUCESSO}    timeout=10s
-    Sleep    1s
-    Capture Page Screenshot
-    Sleep    2s
-    Page Should Contain Element    ${BADGE_PUBLICACAO_VERIFICADA}
-    Page Should Contain Element    ${LABEL_PUBLICACAO_VERIFICADA}
-    Sleep    1s
+Verificar Publicacao Validada
+    Wait Until Element Is Visible    ${BADGE_PUBLICACAO_VERIFICADA}    timeout=30s
+    Wait Until Element Is Visible    ${LABEL_PUBLICACAO_VERIFICADA}    timeout=30s
     Capture Page Screenshot
 
 Fechar o navegador

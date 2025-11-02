@@ -7,12 +7,11 @@ Test Teardown    Fechar o navegador
 *** Test Cases ***
 CT31 - Validar publicação de usuário como moderador
     [Documentation]    Testa o fluxo completo de validação de publicação por um moderador
-    Abrir o navegador
+    [Tags]    validar_publicacao_moderador
     Realizar login como moderador
     Acessar menu de usuários cadastrados
     Selecionar usuário com publicações
     Acessar aba de publicações
     Validar primeira publicação não verificada
     Confirmar validação da publicação
-    Verificar se publicação foi validada
-    Fechar o navegador
+    Verificar Publicacao Validada

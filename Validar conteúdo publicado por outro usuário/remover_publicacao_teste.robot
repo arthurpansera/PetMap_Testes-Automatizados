@@ -7,7 +7,7 @@ Test Teardown    Fechar o navegador
 *** Test Cases ***
 CT32 - Remover uma publicação como moderador
     [Documentation]    Testa o fluxo completo de remoção de publicação por um moderador
-    Abrir o navegador
+    [Tags]    remover_publicacao_moderador
     Realizar login como moderador
     Acessar menu de usuários cadastrados
     Selecionar usuário com publicações
@@ -15,4 +15,3 @@ CT32 - Remover uma publicação como moderador
     Remover primeira publicação
     Confirmar remoção da publicação
     Verificar se publicação foi removida
-    Fechar o navegador

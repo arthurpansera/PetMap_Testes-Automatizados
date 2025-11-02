@@ -7,11 +7,10 @@ Test Teardown    Fechar o navegador
 *** Test Cases ***
 CT29 - Banir usuário como moderador
     [Documentation]    Testa o fluxo completo de banimento de usuário por um moderador
-    Abrir o navegador
+    [Tags]    banir_usuario_moderador
     Realizar login como moderador
     Acessar menu de usuários cadastrados
     Selecionar primeiro usuário não banido
     Banir usuário
     Confirmar banimento
     Verificar se usuário foi banido
-    Fechar o navegador
