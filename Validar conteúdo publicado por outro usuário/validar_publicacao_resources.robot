@@ -19,6 +19,7 @@ ${BADGE_PUBLICACAO_VERIFICADA}    xpath=//button[contains(@class, 'verified-post
 ${LABEL_PUBLICACAO_VERIFICADA}    xpath=//span[contains(@class, 'verified-label')]
 
 *** Keywords ***
+
 Abrir o navegador
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window

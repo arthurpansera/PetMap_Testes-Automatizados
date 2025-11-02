@@ -15,6 +15,7 @@ ${BOTAO_VER_PERFIL}    css=a.btn-ver-perfil
 ${TAB_PUBLICACOES}    xpath=//button[contains(text(), 'Publicações')]
 ${BOTAO_REMOVER_PUBLICACAO}    css=.delete-post-button.sweet-remove-btn
 ${BOTAO_CONFIRMAR_REMOCAO}    css=.swal2-confirm
+
 *** Keywords ***
 Abrir o navegador
     Open Browser    ${URL}    ${BROWSER}
