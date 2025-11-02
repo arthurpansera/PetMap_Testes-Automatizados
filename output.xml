@@ -1,265 +1,377 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-11-02T11:07:58.250117" rpa="false" schemaversion="5">
-<suite id="s1" name="Banir Perfil Teste" source="c:\Users\Jean\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Validar perfil de outro usuário\banir_perfil_teste.robot">
-<test id="s1-t1" name="Cenário: Banir usuário como moderador" line="8">
-<kw name="Abrir o navegador" owner="banir_perfil_resources" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-11-02T11:35:09.898986" rpa="false" schemaversion="5">
+<suite id="s1" name="Validar Publicacao Teste" source="c:\Users\Jean\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Validar conteúdo publicado por outro usuário\validar_publicacao_teste.robot">
+<test id="s1-t1" name="CT31 - Validar publicação de usuário como moderador" line="8">
+<kw name="Abrir o navegador" owner="validar_publicacao_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:07:58.461049" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<msg time="2025-11-02T11:35:10.095718" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-02T11:07:58.460800" elapsed="1.433427"/>
+<status status="PASS" start="2025-11-02T11:35:10.095403" elapsed="1.368403"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-02T11:07:59.894682" elapsed="0.030054"/>
+<status status="PASS" start="2025-11-02T11:35:11.464227" elapsed="0.022797"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:07:58.460267" elapsed="1.464782"/>
+<status status="PASS" start="2025-11-02T11:35:10.094730" elapsed="1.392586"/>
 </kw>
-<kw name="Abrir o navegador" owner="banir_perfil_resources">
+<kw name="Abrir o navegador" owner="validar_publicacao_resources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:07:59.926290" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<msg time="2025-11-02T11:35:11.488445" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-02T11:07:59.925963" elapsed="1.424131"/>
+<status status="PASS" start="2025-11-02T11:35:11.488160" elapsed="1.381511"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-02T11:08:01.350439" elapsed="0.033561"/>
+<status status="PASS" start="2025-11-02T11:35:12.870002" elapsed="0.023002"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:07:59.925533" elapsed="1.458729"/>
+<status status="PASS" start="2025-11-02T11:35:11.487772" elapsed="1.405450"/>
 </kw>
-<kw name="Realizar login como moderador" owner="banir_perfil_resources">
+<kw name="Realizar login como moderador" owner="validar_publicacao_resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:01.386135" level="INFO">Clicking element 'css=a.btn'.</msg>
+<msg time="2025-11-02T11:35:12.894839" level="INFO">Clicking element 'css=a.btn'.</msg>
 <arg>${BOTAO_ENTRAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:01.385543" elapsed="0.142429"/>
+<status status="PASS" start="2025-11-02T11:35:12.894240" elapsed="0.154947"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EMAIL_INPUT}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-02T11:08:01.528358" elapsed="0.023924"/>
+<status status="PASS" start="2025-11-02T11:35:13.049607" elapsed="0.030627"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:01.552868" level="INFO">Typing text 'moderador@petmap.com' into text field 'id=email'.</msg>
+<msg time="2025-11-02T11:35:13.080966" level="INFO">Typing text 'moderador@petmap.com' into text field 'id=email'.</msg>
 <arg>${EMAIL_INPUT}</arg>
 <arg>${LOGIN_EMAIL_MOD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:01.552576" elapsed="0.069451"/>
+<status status="PASS" start="2025-11-02T11:35:13.080595" elapsed="0.093012"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:01.622617" level="INFO">Typing text 'Moderador@123' into text field 'id=password'.</msg>
+<msg time="2025-11-02T11:35:13.174215" level="INFO">Typing text 'Moderador@123' into text field 'id=password'.</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${LOGIN_SENHA_MOD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:01.622323" elapsed="0.051139"/>
+<status status="PASS" start="2025-11-02T11:35:13.173878" elapsed="0.076368"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:03.674322" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-11-02T11:35:15.251350" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:01.673828" elapsed="2.000728"/>
+<status status="PASS" start="2025-11-02T11:35:13.250595" elapsed="2.001020"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:03.909802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-02T11:35:15.478849" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-11-02T11:08:03.674744" elapsed="0.235303"/>
+<status status="PASS" start="2025-11-02T11:35:15.251851" elapsed="0.227343"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:03.910587" level="INFO">Clicking element 'css=input.login-btn'.</msg>
+<msg time="2025-11-02T11:35:15.479896" level="INFO">Clicking element 'css=input.login-btn'.</msg>
 <arg>${BOTAO_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:03.910236" elapsed="0.121170"/>
+<status status="PASS" start="2025-11-02T11:35:15.479458" elapsed="0.130149"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:08:01.385092" elapsed="2.646582"/>
+<status status="PASS" start="2025-11-02T11:35:12.893749" elapsed="2.716037"/>
 </kw>
-<kw name="Acessar menu de usuários cadastrados" owner="banir_perfil_resources">
+<kw name="Acessar menu de usuários cadastrados" owner="validar_publicacao_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${MENU_USUARIOS}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-02T11:08:04.032579" elapsed="0.031782"/>
+<status status="PASS" start="2025-11-02T11:35:15.610672" elapsed="0.032077"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:04.064829" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Usuários Cadastrados')]'.</msg>
+<msg time="2025-11-02T11:35:15.643417" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Usuários Cadastrados')]'.</msg>
 <arg>${MENU_USUARIOS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:04.064589" elapsed="0.079507"/>
+<status status="PASS" start="2025-11-02T11:35:15.643064" elapsed="0.101890"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:06.144694" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-11-02T11:35:17.745658" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:04.144325" elapsed="2.000626"/>
+<status status="PASS" start="2025-11-02T11:35:15.745211" elapsed="2.000734"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:06.425654" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-02T11:35:17.999680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-11-02T11:08:06.145173" elapsed="0.280726"/>
+<status status="PASS" start="2025-11-02T11:35:17.746156" elapsed="0.253750"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:08:04.032167" elapsed="2.393847"/>
+<status status="PASS" start="2025-11-02T11:35:15.610230" elapsed="2.389822"/>
 </kw>
-<kw name="Selecionar primeiro usuário não banido" owner="banir_perfil_resources">
+<kw name="Selecionar usuário com publicações" owner="validar_publicacao_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_VER_PERFIL}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-02T11:08:06.426923" elapsed="0.012519"/>
+<status status="PASS" start="2025-11-02T11:35:18.000934" elapsed="0.011150"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:07.440097" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-02T11:35:19.012971" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:06.439683" elapsed="1.000680"/>
+<status status="PASS" start="2025-11-02T11:35:18.012328" elapsed="1.000877"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:07.440851" level="INFO">Clicking element 'css=a.btn-ver-perfil'.</msg>
+<msg time="2025-11-02T11:35:19.013622" level="INFO">Clicking element 'css=a.btn-ver-perfil'.</msg>
 <arg>${BOTAO_VER_PERFIL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:07.440572" elapsed="0.096207"/>
+<status status="PASS" start="2025-11-02T11:35:19.013381" elapsed="0.083644"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:09.537334" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-11-02T11:35:21.097732" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:07.537031" elapsed="2.000561"/>
+<status status="PASS" start="2025-11-02T11:35:19.097369" elapsed="2.000596"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:09.838599" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-02T11:35:21.379782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-11-02T11:08:09.537812" elapsed="0.301028"/>
+<status status="PASS" start="2025-11-02T11:35:21.098142" elapsed="0.281856"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:08:06.426547" elapsed="3.412411"/>
+<status status="PASS" start="2025-11-02T11:35:18.000631" elapsed="3.379481"/>
 </kw>
-<kw name="Banir usuário" owner="banir_perfil_resources">
+<kw name="Acessar aba de publicações" owner="validar_publicacao_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_BANIR_USUARIO}</arg>
+<arg>${TAB_PUBLICACOES}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-02T11:08:09.839904" elapsed="2.693449"/>
+<status status="PASS" start="2025-11-02T11:35:21.380920" elapsed="0.012257"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:13.534153" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-02T11:35:22.394165" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:12.533705" elapsed="1.000683"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:13.832179" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-11-02T11:08:13.534740" elapsed="0.297693"/>
+<status status="PASS" start="2025-11-02T11:35:21.393419" elapsed="1.001171"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:13.832966" level="INFO">Clicking element 'xpath=//button[@id='btnBanirUsuario']'.</msg>
-<arg>${BOTAO_BANIR_USUARIO}</arg>
+<msg time="2025-11-02T11:35:22.395134" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Publicações')]'.</msg>
+<arg>${TAB_PUBLICACOES}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:13.832642" elapsed="0.042817"/>
-</kw>
-<status status="PASS" start="2025-11-02T11:08:09.839430" elapsed="4.036253"/>
-</kw>
-<kw name="Confirmar banimento" owner="banir_perfil_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_CONFIRMAR_BANIMENTO}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-02T11:08:13.876479" elapsed="0.220012"/>
+<status status="PASS" start="2025-11-02T11:35:22.394833" elapsed="0.031029"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:16.097333" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-11-02T11:35:24.426617" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:14.096771" elapsed="2.000792"/>
+<status status="PASS" start="2025-11-02T11:35:22.426098" elapsed="2.000839"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:16.359550" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-02T11:35:24.724779" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-11-02T11:08:16.097742" elapsed="0.262055"/>
+<status status="PASS" start="2025-11-02T11:35:24.427228" elapsed="0.297803"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:16.360315" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
-<arg>${BOTAO_CONFIRMAR_BANIMENTO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-02T11:08:16.359985" elapsed="0.050543"/>
+<status status="PASS" start="2025-11-02T11:35:21.380621" elapsed="3.344547"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:18.411397" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:16.410765" elapsed="2.000920"/>
-</kw>
-<status status="PASS" start="2025-11-02T11:08:13.876116" elapsed="4.535747"/>
-</kw>
-<kw name="Verificar se usuário foi banido" owner="banir_perfil_resources">
+<kw name="Validar primeira publicação não verificada" owner="validar_publicacao_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ALERT_SUCESSO}</arg>
+<msg time="2025-11-02T11:35:30.903453" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.60); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6c2b17a35
+	0x7ff6c2b17a90
+	0x7ff6c28916ad
+	0x7ff6c287d1c5
+	0x7ff6c28a2a5a
+	0x7ff6c291a306
+	0x7ff6c293b222
+	0x7ff6c28db068
+	0x7ff6c28dbe93
+	0x7ff6c2dd29d0
+	0x7ff6c2dcce50
+	0x7ff6c2decc45
+	0x7ff6c2b330ce
+	0x7ff6c2b3adbf
+	0x7ff6c2b20c14
+	0x7ff6c2b20dcf
+	0x7ff6c2b06828
+	0x7ff842ffe8d7
+	0x7ff843c4c53c
+</msg>
+<msg time="2025-11-02T11:35:30.904589" level="FAIL">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: unable to send message to renderer)
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6c2b17a35
+	0x7ff6c2b17a90
+	0x7ff6c28914b5
+	0x7ff6c287e52a
+	0x7ff6c287d3cf
+	0x7ff6c28a2a5a
+	0x7ff6c291a306
+	0x7ff6c293b222
+	0x7ff6c28db068
+	0x7ff6c28dbe93
+	0x7ff6c2dd29d0
+	0x7ff6c2dcce50
+	0x7ff6c2decc45
+	0x7ff6c2b330ce
+	0x7ff6c2b3adbf
+	0x7ff6c2b20c14
+	0x7ff6c2b20dcf
+	0x7ff6c2b06828
+	0x7ff842ffe8d7
+	0x7ff843c4c53c
+</msg>
+<arg>${BOTAO_VALIDAR_PUBLICACAO}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-02T11:08:18.412596" elapsed="0.013064"/>
+<status status="FAIL" start="2025-11-02T11:35:24.726170" elapsed="6.235583">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: unable to send message to renderer)
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6c2b17a35
+	0x7ff6c2b17a90
+	0x7ff6c28914b5
+	0x7ff6c287e52a
+	0x7ff6c287d3cf
+	0x7ff6c28a2a5a
+	0x7ff6c291a306
+	0x7ff6c293b222
+	0x7ff6c28db068
+	0x7ff6c28dbe93
+	0x7ff6c2dd29d0
+	0x7ff6c2dcce50
+	0x7ff6c2decc45
+	0x7ff6c2b330ce
+	0x7ff6c2b3adbf
+	0x7ff6c2b20c14
+	0x7ff6c2b20dcf
+	0x7ff6c2b06828
+	0x7ff842ffe8d7
+	0x7ff843c4c53c
+</status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:20.426477" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:18.425955" elapsed="2.000783"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:20.433958" level="INFO">Current page contains element 'xpath=//img[@alt='Banido']'.</msg>
-<arg>${BADGE_BANIDO}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-11-02T11:08:20.426949" elapsed="0.007215"/>
-</kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:20.440425" level="INFO">Current page contains element 'xpath=//button[@id='btnDesbanirUsuario']'.</msg>
-<arg>${BOTAO_DESBANIR}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-11-02T11:08:20.434327" elapsed="0.006276"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-02T11:08:21.441217" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-02T11:08:20.440768" elapsed="1.000697"/>
+<status status="NOT RUN" start="2025-11-02T11:35:30.962102" elapsed="0.000125"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-11-02T11:08:21.701974" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-11-02T11:08:21.441694" elapsed="0.260559"/>
+<status status="NOT RUN" start="2025-11-02T11:35:30.962415" elapsed="0.000091"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:08:18.412305" elapsed="3.290145"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BOTAO_VALIDAR_PUBLICACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-02T11:35:30.962667" elapsed="0.000093"/>
 </kw>
-<kw name="Fechar o navegador" owner="banir_perfil_resources">
+<status status="FAIL" start="2025-11-02T11:35:24.725690" elapsed="6.237280">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: unable to send message to renderer)
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6c2b17a35
+	0x7ff6c2b17a90
+	0x7ff6c28914b5
+	0x7ff6c287e52a
+	0x7ff6c287d3cf
+	0x7ff6c28a2a5a
+	0x7ff6c291a306
+	0x7ff6c293b222
+	0x7ff6c28db068
+	0x7ff6c28dbe93
+	0x7ff6c2dd29d0
+	0x7ff6c2dcce50
+	0x7ff6c2decc45
+	0x7ff6c2b330ce
+	0x7ff6c2b3adbf
+	0x7ff6c2b20c14
+	0x7ff6c2b20dcf
+	0x7ff6c2b06828
+	0x7ff842ffe8d7
+	0x7ff843c4c53c
+</status>
+</kw>
+<kw name="Confirmar validação da publicação" owner="validar_publicacao_resources">
+<status status="NOT RUN" start="2025-11-02T11:35:30.963660" elapsed="0.000111"/>
+</kw>
+<kw name="Verificar se publicação foi validada" owner="validar_publicacao_resources">
+<status status="NOT RUN" start="2025-11-02T11:35:30.964168" elapsed="0.000113"/>
+</kw>
+<kw name="Fechar o navegador" owner="validar_publicacao_resources">
+<status status="NOT RUN" start="2025-11-02T11:35:30.964613" elapsed="0.000114"/>
+</kw>
+<kw name="Fechar o navegador" owner="validar_publicacao_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-02T11:08:21.703580" elapsed="2.258696"/>
+<status status="PASS" start="2025-11-02T11:35:30.965656" elapsed="2.069668"/>
 </kw>
-<status status="PASS" start="2025-11-02T11:08:21.703078" elapsed="2.259394"/>
+<status status="PASS" start="2025-11-02T11:35:30.965221" elapsed="2.070297"/>
 </kw>
-<kw name="Fechar o navegador" owner="banir_perfil_resources" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-02T11:08:23.963360" elapsed="0.000141"/>
-</kw>
-<status status="PASS" start="2025-11-02T11:08:23.963051" elapsed="0.000537"/>
-</kw>
-<doc>Testa o fluxo completo de banimento de usuário por um moderador</doc>
-<status status="PASS" start="2025-11-02T11:07:58.459637" elapsed="25.504170"/>
+<doc>Testa o fluxo completo de validação de publicação por um moderador</doc>
+<status status="FAIL" start="2025-11-02T11:35:10.093919" elapsed="22.941835">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: unable to send message to renderer)
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6c2b17a35
+	0x7ff6c2b17a90
+	0x7ff6c28914b5
+	0x7ff6c287e52a
+	0x7ff6c287d3cf
+	0x7ff6c28a2a5a
+	0x7ff6c291a306
+	0x7ff6c293b222
+	0x7ff6c28db068
+	0x7ff6c28dbe93
+	0x7ff6c2dd29d0
+	0x7ff6c2dcce50
+	0x7ff6c2decc45
+	0x7ff6c2b330ce
+	0x7ff6c2b3adbf
+	0x7ff6c2b20c14
+	0x7ff6c2b20dcf
+	0x7ff6c2b06828
+	0x7ff842ffe8d7
+	0x7ff843c4c53c
+</status>
 </test>
-<doc>Teste automatizado para o fluxo de validação de perfil por um moderador.</doc>
-<status status="PASS" start="2025-11-02T11:07:58.254097" elapsed="25.710538"/>
+<doc>Teste automatizado para o fluxo de validação de publicação por um moderador.</doc>
+<status status="FAIL" start="2025-11-02T11:35:09.902779" elapsed="23.134106"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Banir Perfil Teste" id="s1" pass="1" fail="0" skip="0">Banir Perfil Teste</stat>
+<stat name="Validar Publicacao Teste" id="s1" pass="0" fail="1" skip="0">Validar Publicacao Teste</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-11-02T11:35:30.903453" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=142.0.7444.60); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6c2b17a35
+	0x7ff6c2b17a90
+	0x7ff6c28916ad
+	0x7ff6c287d1c5
+	0x7ff6c28a2a5a
+	0x7ff6c291a306
+	0x7ff6c293b222
+	0x7ff6c28db068
+	0x7ff6c28dbe93
+	0x7ff6c2dd29d0
+	0x7ff6c2dcce50
+	0x7ff6c2decc45
+	0x7ff6c2b330ce
+	0x7ff6c2b3adbf
+	0x7ff6c2b20c14
+	0x7ff6c2b20dcf
+	0x7ff6c2b06828
+	0x7ff842ffe8d7
+	0x7ff843c4c53c
+</msg>
 </errors>
 </robot>
