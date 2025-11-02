@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-11-02T16:38:53.647064" rpa="false" schemaversion="5">
+<suite id="s1" name="Remover Publicacao Teste" source="c:\Users\Jean\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Validar conteúdo publicado por outro usuário\remover_publicacao_teste.robot">
+<test id="s1-t1" name="CT32 - Remover uma publicação como moderador" line="8">
+<kw name="Abrir o navegador" owner="remover_publicacao_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:53.871927" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-02T16:38:53.871671" elapsed="1.826769"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-02T16:38:55.698824" elapsed="0.021777"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:38:53.871070" elapsed="1.849745"/>
+</kw>
+<kw name="Abrir o navegador" owner="remover_publicacao_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:55.721866" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-02T16:38:55.721617" elapsed="1.428323"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-02T16:38:57.150347" elapsed="0.025759"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:38:55.721274" elapsed="1.455028"/>
+</kw>
+<kw name="Realizar login como moderador" owner="remover_publicacao_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:57.177502" level="INFO">Clicking element 'css=a.btn'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:38:57.177102" elapsed="0.164902"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:38:57.342269" elapsed="0.078032"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:57.420825" level="INFO">Typing text 'praesMOD@petmap.com' into text field 'id=email'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${LOGIN_EMAIL_MOD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:38:57.420545" elapsed="0.069026"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:57.490131" level="INFO">Typing text 'Moderador@123' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${LOGIN_SENHA_MOD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:38:57.489844" elapsed="0.048476"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:38:59.539260" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:38:57.538647" elapsed="2.000875"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:59.782220" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:38:59.539732" elapsed="0.242719"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:59.782867" level="INFO">Clicking element 'css=input.login-btn'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:38:59.782634" elapsed="0.160415"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:38:57.176734" elapsed="2.766598"/>
+</kw>
+<kw name="Acessar menu de usuários cadastrados" owner="remover_publicacao_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_USUARIOS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:38:59.944220" elapsed="0.018877"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:38:59.963693" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Usuários Cadastrados')]'.</msg>
+<arg>${MENU_USUARIOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:38:59.963374" elapsed="0.143510"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:02.107820" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:00.107227" elapsed="2.000891"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:02.368820" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:02.108382" elapsed="0.260663"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:38:59.943861" elapsed="2.425303"/>
+</kw>
+<kw name="Selecionar usuário com publicações" owner="remover_publicacao_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_VER_PERFIL}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:39:02.370034" elapsed="0.012128"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:03.382687" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:02.382410" elapsed="1.000543"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:03.383443" level="INFO">Clicking element 'css=a.btn-ver-perfil'.</msg>
+<arg>${BOTAO_VER_PERFIL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:39:03.383159" elapsed="0.382990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:05.766696" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:03.766418" elapsed="2.000534"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:06.050435" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:05.767194" elapsed="0.283461"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:02.369616" elapsed="3.681156"/>
+</kw>
+<kw name="Acessar aba de publicações" owner="remover_publicacao_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TAB_PUBLICACOES}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:39:06.051626" elapsed="0.012060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:07.064692" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:06.063924" elapsed="1.001275"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:07.065846" level="INFO">Clicking element 'xpath=//button[contains(text(), 'Publicações')]'.</msg>
+<arg>${TAB_PUBLICACOES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:39:07.065485" elapsed="0.035893"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:09.102476" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:07.101687" elapsed="2.001037"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:09.385161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:09.102919" elapsed="0.282594"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:06.051204" elapsed="3.334493"/>
+</kw>
+<kw name="Remover primeira publicação" owner="remover_publicacao_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_REMOVER_PUBLICACAO}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:39:09.386634" elapsed="0.010588"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:10.397928" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:09.397510" elapsed="1.000676"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:10.682031" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:10.398388" elapsed="0.283932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:10.682809" level="INFO">Clicking element 'css=button.delete-post-button.sweet-remove-btn'.</msg>
+<arg>${BOTAO_REMOVER_PUBLICACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:39:10.682528" elapsed="0.043830"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:09.386168" elapsed="1.340380"/>
+</kw>
+<kw name="Confirmar remoção da publicação" owner="remover_publicacao_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_CONFIRMAR_REMOCAO}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:39:10.727400" elapsed="0.223348"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:12.951233" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:10.950967" elapsed="2.000531"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:13.176809" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:12.951711" elapsed="0.225314"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:13.177416" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
+<arg>${BOTAO_CONFIRMAR_REMOCAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T16:39:13.177196" elapsed="0.068015"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:15.246210" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:13.245452" elapsed="2.001018"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:10.726995" elapsed="4.519618"/>
+</kw>
+<kw name="Verificar se publicação foi removida" owner="remover_publicacao_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ALERT_SUCESSO}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T16:39:15.247319" elapsed="0.010240"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:16.258744" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:15.257815" elapsed="1.001157"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:16.524102" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:16.259155" elapsed="0.265238"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:16.533586" level="INFO">Current page contains text 'Publicação removida com sucesso'.</msg>
+<arg>Publicação removida com sucesso</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-02T16:39:16.524677" elapsed="0.009079"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T16:39:17.534121" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T16:39:16.533907" elapsed="1.000470"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T16:39:17.820183" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T16:39:17.534579" elapsed="0.285838"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:15.246990" elapsed="2.573547"/>
+</kw>
+<kw name="Fechar o navegador" owner="remover_publicacao_resources">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-02T16:39:17.821295" elapsed="2.157790"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:17.820991" elapsed="2.158284"/>
+</kw>
+<kw name="Fechar o navegador" owner="remover_publicacao_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-02T16:39:19.980253" elapsed="0.000209"/>
+</kw>
+<status status="PASS" start="2025-11-02T16:39:19.979794" elapsed="0.000823"/>
+</kw>
+<doc>Testa o fluxo completo de remoção de publicação por um moderador</doc>
+<status status="PASS" start="2025-11-02T16:38:53.870305" elapsed="26.110559"/>
+</test>
+<doc>Teste automatizado para o fluxo de remoção de publicação por um moderador.</doc>
+<status status="PASS" start="2025-11-02T16:38:53.651498" elapsed="26.330286"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Remover Publicacao Teste" id="s1" pass="1" fail="0" skip="0">Remover Publicacao Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
