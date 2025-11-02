@@ -5,7 +5,7 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT1 - Cadastrar cidadão sem nome
+CT01 - Cadastrar cidadão sem nome
     [Documentation]    Teste para verificar o comportamento do sistema ao tentar cadastrar um cidadão sem nome.
     [Tags]   cadastrar_cidadao_sem_nome
     Acessar página de cadastro
@@ -14,7 +14,7 @@ CT1 - Cadastrar cidadão sem nome
     Clicar no botão "Cadastrar-se"
     Verificar mensagem de erro indicando que o campo "Nome" é obrigatório
 
-CT2 - Cadastrar cidadão com e-mail já vinculado a outra conta
+CT02 - Cadastrar cidadão com e-mail já vinculado a outra conta
     [Documentation]    Teste para verificar o comportamento do sistema ao tentar cadastrar um cidadão com e-mail já vinculado a outra conta.
     [Tags]   cadastrar_cidadao_com_email_ja_vinculado
     Acessar página de cadastro

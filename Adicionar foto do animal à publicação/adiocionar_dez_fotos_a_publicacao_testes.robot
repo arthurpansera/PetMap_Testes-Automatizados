@@ -5,9 +5,9 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT14 - Adicionar foto do animal à publicação
+CT14 - Adicionar dez fotos à publicação
     [Documentation]    Testa se o sistema aceita até 8 fotos e rejeita quando tentar adicionar mais
-    [Tags]   adicionar_10_fotos_na_publicacao
+    [Tags]   adicionar_10_fotos_a_publicacao
     Realizar login
     Clicar no botão de realizar publicação
     Preencher o formulário da publicação CT14

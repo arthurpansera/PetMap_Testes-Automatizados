@@ -5,7 +5,7 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT4 - Excluir conta de moderador
+CT04 - Excluir conta de moderador
     [Documentation]    Teste para verificar o comportamento do sistema ao tentar excluir a conta de um moderador.
     [Tags]   excluir_conta_moderador
     Realizar login como moderador

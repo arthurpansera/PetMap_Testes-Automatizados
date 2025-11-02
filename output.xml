@@ -1,206 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-11-01T16:22:46.584828" rpa="false" schemaversion="5">
-<suite id="s1" name="Adicionar Foto Invalida A Publicacao Testes" source="c:\Users\stefa\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Adicionar foto do animal à publicação\adicionar_foto_invalida_a_publicacao_testes.robot">
-<test id="s1-t1" name="CT15 - Upload de arquivo inválido" line="8">
-<kw name="Abrir o navegador" owner="adicionar_foto_invalida_a_publicacao_resources" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-11-02T14:33:28.284223" rpa="false" schemaversion="5">
+<suite id="s1" name="Visualizar Publicacoes Outro Usuario Testes" source="c:\Users\stefa\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Visualizar Publicação no Perfil de Outro Usuário\visualizar_publicacoes_outro_usuario_testes.robot">
+<test id="s1-t1" name="CT19 - Visualizar publicações no perfil de outro usuário" line="8">
+<kw name="Abrir Navegador" owner="visualizar_publicacoes_outro_usuario_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:47.247424" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
-<arg>${URL}</arg>
+<msg time="2025-11-02T14:33:28.654246" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/PetMap/PROJETO/'.</msg>
+<arg>${URL_BASE}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-01T16:22:47.246725" elapsed="2.656202"/>
+<status status="PASS" start="2025-11-02T14:33:28.653852" elapsed="2.040520"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-01T16:22:49.903641" elapsed="0.037644"/>
+<status status="PASS" start="2025-11-02T14:33:30.694757" elapsed="0.036319"/>
 </kw>
-<status status="PASS" start="2025-11-01T16:22:47.244625" elapsed="2.697214"/>
+<status status="PASS" start="2025-11-02T14:33:28.653099" elapsed="2.078232"/>
 </kw>
-<kw name="Realizar login" owner="adicionar_foto_invalida_a_publicacao_resources">
+<kw name="Acessar Página Principal" owner="visualizar_publicacoes_outro_usuario_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-02T14:33:30.733124" level="INFO">Opening url 'http://localhost/PetMap/PROJETO/'</msg>
+<arg>${URL_BASE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-02T14:33:30.732730" elapsed="0.032408"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BARRA_PESQUISA}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-02T14:33:30.765691" elapsed="0.011726"/>
+</kw>
+<status status="PASS" start="2025-11-02T14:33:30.732033" elapsed="0.045589"/>
+</kw>
+<kw name="Inserir Nome Na Barra De Pesquisa" owner="visualizar_publicacoes_outro_usuario_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_ENTRAR}</arg>
-<arg>timeout=10s</arg>
+<arg>${BARRA_PESQUISA}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T16:22:49.946046" elapsed="0.043949"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:49.991075" level="INFO">Clicking element 'css=a.btn'.</msg>
-<arg>${BOTAO_ENTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:49.990462" elapsed="0.218695"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T16:22:50.209589" elapsed="0.033970"/>
+<status status="PASS" start="2025-11-02T14:33:30.778846" elapsed="0.022969"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:50.245232" level="INFO">Typing text 'maria@gmail.com' into text field 'id=email'.</msg>
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_CONTA}</arg>
+<msg time="2025-11-02T14:33:30.802400" level="INFO">Typing text 'Steh' into text field 'css=form.search-bar input[name="pesquisa"]'.</msg>
+<arg>${BARRA_PESQUISA}</arg>
+<arg>${nome_usuario}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:50.244218" elapsed="0.181914"/>
+<status status="PASS" start="2025-11-02T14:33:30.802082" elapsed="0.091015"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:50.427536" level="INFO">Typing text 'maria@1234' into text field 'id=password'.</msg>
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${SENHA_CONTA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:50.426680" elapsed="0.124863"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:50.552420" level="INFO">Clicking element 'css=input.login-btn'.</msg>
-<arg>${BOTAO_LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:50.551947" elapsed="0.350015"/>
-</kw>
-<status status="PASS" start="2025-11-01T16:22:49.943227" elapsed="0.959250"/>
-</kw>
-<kw name="Clicar no botão de realizar publicação" owner="adicionar_foto_invalida_a_publicacao_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_NOVA_PUBLICACAO}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T16:22:50.905571" elapsed="0.309764"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:51.216549" level="INFO">Clicking element 'css=button.floating-button'.</msg>
-<arg>${BOTAO_NOVA_PUBLICACAO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:51.215900" elapsed="0.111178"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T14:33:31.396090" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T14:33:30.893355" elapsed="0.503057"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-01T16:22:52.328739" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2025-11-02T14:33:33.397403" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-01T16:22:51.327612" elapsed="1.002020"/>
+<status status="PASS" start="2025-11-02T14:33:31.396616" elapsed="2.001148"/>
 </kw>
-<status status="PASS" start="2025-11-01T16:22:50.904481" elapsed="1.425582"/>
-</kw>
-<kw name="Preencher o formulário da publicação" owner="adicionar_foto_invalida_a_publicacao_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_TITULO}</arg>
-<arg>timeout=10s</arg>
+<arg>${LISTA_SUGESTOES}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T16:22:52.332385" elapsed="0.036104"/>
+<status status="PASS" start="2025-11-02T14:33:33.397997" elapsed="0.016259"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:52.370308" level="INFO">Typing text 'Teste arquivo inválido' into text field 'id=titulo'.</msg>
-<arg>${INPUT_TITULO}</arg>
-<arg>${TITULO_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:52.369253" elapsed="0.234700"/>
+<arg>Steh</arg>
+<status status="PASS" start="2025-11-02T14:33:30.778221" elapsed="2.636226"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:52.605033" level="INFO">Typing text 'Tentando adicionar um arquivo não suportado.' into text field 'id=conteudo'.</msg>
-<arg>${INPUT_CONTEUDO}</arg>
-<arg>${CONTEUDO_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:52.604431" elapsed="0.284652"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:52.890424" level="INFO">Selecting options from selection list 'id=tipo_publicacao' by value animal.</msg>
-<arg>${SELECT_TIPO}</arg>
-<arg>animal</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-11-01T16:22:52.889685" elapsed="0.090267"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:52.981065" level="INFO">Typing text 'Rua das Flores' into text field 'id=endereco_rua'.</msg>
-<arg>${INPUT_RUA}</arg>
-<arg>${RUA_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:52.980449" elapsed="0.176483"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:53.158123" level="INFO">Typing text 'Centro' into text field 'id=endereco_bairro'.</msg>
-<arg>${INPUT_BAIRRO}</arg>
-<arg>${BAIRRO_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:53.157485" elapsed="0.174044"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:53.333206" level="INFO">Typing text 'Curitiba' into text field 'id=endereco_cidade'.</msg>
-<arg>${INPUT_CIDADE}</arg>
-<arg>${CIDADE_VALOR}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:53.332246" elapsed="0.188323"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:53.522171" level="INFO">Selecting options from selection list 'id=state' by value PR.</msg>
-<arg>${SELECT_ESTADO}</arg>
-<arg>PR</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-11-01T16:22:53.521358" elapsed="0.143000"/>
-</kw>
-<status status="PASS" start="2025-11-01T16:22:52.331570" elapsed="1.333296"/>
-</kw>
-<kw name="Tentar adicionar arquivo inválido" owner="adicionar_foto_invalida_a_publicacao_resources">
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:53.667594" level="INFO">Sending C:\Users\stefa\OneDrive\Documentos\GitHub\PetMap_Testes-Automatizados\Adicionar foto do animal à publicação\Arquivos\TXT-TESTE.txt to browser.</msg>
-<arg>${INPUT_FOTOS}</arg>
-<arg>${ARQUIVO_INVALIDO}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:53.666853" elapsed="0.078744"/>
-</kw>
-<doc>Tenta enviar um arquivo que não é imagem</doc>
-<status status="PASS" start="2025-11-01T16:22:53.665935" elapsed="0.080564"/>
-</kw>
-<kw name="Verificar mensagem de erro de arquivo inválido" owner="adicionar_foto_invalida_a_publicacao_resources">
+<kw name="Selecionar Usuario Da Lista" owner="visualizar_publicacoes_outro_usuario_resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ALERTA_SWEET}</arg>
-<arg>timeout=10s</arg>
+<arg>${ITEM_SUGESTAO}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T16:22:53.748264" elapsed="0.252718"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:54.035978" level="INFO">${mensagem} = Apenas imagens JPEG, JPG e PNG são permitidas.</msg>
-<var>${mensagem}</var>
-<arg>${ALERTA_SWEET}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:54.001397" elapsed="0.034873"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Mensagem exibida: ${mensagem}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-01T16:22:54.036624" elapsed="0.000809"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${mensagem}</arg>
-<arg>${MENSAGEM_ESPERADA_INVALIDO}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-11-01T16:22:54.038076" elapsed="0.000765"/>
+<status status="PASS" start="2025-11-02T14:33:33.415359" elapsed="0.015046"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-01T16:22:54.039792" level="INFO">Clicking element 'css=button.swal2-confirm'.</msg>
-<arg>${BOTAO_OK_SWEET}</arg>
+<msg time="2025-11-02T14:33:33.430936" level="INFO">Clicking element 'css=div.user-suggestions .suggestion-item:first-child'.</msg>
+<arg>${ITEM_SUGESTAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T16:22:54.039284" elapsed="0.112821"/>
+<status status="PASS" start="2025-11-02T14:33:33.430657" elapsed="0.100117"/>
 </kw>
-<doc>Verifica se a mensagem de erro foi exibida</doc>
-<status status="PASS" start="2025-11-01T16:22:53.747536" elapsed="0.405089"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${AREA_PUBLICACOES}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-02T14:33:33.531036" elapsed="0.009942"/>
 </kw>
-<kw name="Fechar o navegador" owner="adicionar_foto_invalida_a_publicacao_resources" type="TEARDOWN">
+<status status="PASS" start="2025-11-02T14:33:33.414963" elapsed="0.126244"/>
+</kw>
+<kw name="Rolar Ate As Publicacoes" owner="visualizar_publicacoes_outro_usuario_resources">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${AREA_PUBLICACOES}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-02T14:33:33.542183" elapsed="0.317562"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T14:33:34.180021" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T14:33:33.860066" elapsed="0.320218"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-02T14:33:35.181234" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-02T14:33:34.180467" elapsed="1.001040"/>
+</kw>
+<status status="PASS" start="2025-11-02T14:33:33.541807" elapsed="1.639923"/>
+</kw>
+<kw name="Verificar Exibicao Das Publicacoes" owner="visualizar_publicacoes_outro_usuario_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AREA_PUBLICACOES}</arg>
+<arg>timeout=${TEMPO_ESPERA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T14:33:35.182972" elapsed="0.014580"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-02T14:33:35.203634" level="INFO">Current page contains element 'css=.user-posts'.</msg>
+<arg>${AREA_PUBLICACOES}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-02T14:33:35.197797" elapsed="0.006065"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-02T14:33:35.499102" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-02T14:33:35.204044" elapsed="0.295319"/>
+</kw>
+<status status="PASS" start="2025-11-02T14:33:35.182430" elapsed="0.317058"/>
+</kw>
+<kw name="Fechar o Navegador" owner="visualizar_publicacoes_outro_usuario_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-01T16:22:54.154740" elapsed="2.289999"/>
+<status status="PASS" start="2025-11-02T14:33:35.500384" elapsed="2.286839"/>
 </kw>
-<status status="PASS" start="2025-11-01T16:22:54.153821" elapsed="2.291869"/>
+<status status="PASS" start="2025-11-02T14:33:35.500007" elapsed="2.287625"/>
 </kw>
-<status status="PASS" start="2025-11-01T16:22:47.242327" elapsed="9.204432"/>
+<doc>Verifica se o sistema exibe corretamente as publicações do perfil de outro usuário pesquisado.</doc>
+<tag>visualizar_publicacoes_outro_usuario</tag>
+<status status="PASS" start="2025-11-02T14:33:28.652110" elapsed="9.135915"/>
 </test>
-<doc>Teste automatizado para adicionar um arquivo inválido a uma publicação de animal perdido.</doc>
-<status status="PASS" start="2025-11-01T16:22:46.595656" elapsed="9.853431"/>
+<doc>Teste automatizado para verificar a visualização das publicações no perfil de outro usuário.</doc>
+<status status="PASS" start="2025-11-02T14:33:28.289540" elapsed="9.499633"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">visualizar_publicacoes_outro_usuario</stat>
 </tag>
 <suite>
-<stat name="Adicionar Foto Invalida A Publicacao Testes" id="s1" pass="1" fail="0" skip="0">Adicionar Foto Invalida A Publicacao Testes</stat>
+<stat name="Visualizar Publicacoes Outro Usuario Testes" id="s1" pass="1" fail="0" skip="0">Visualizar Publicacoes Outro Usuario Testes</stat>
 </suite>
 </statistics>
 <errors>
