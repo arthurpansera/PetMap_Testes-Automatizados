@@ -2,12 +2,12 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${BROWSER}               Chrome
-${URL_BASE}              http://localhost/PetMap/PROJETO/
-${BOTAO_IMPULSIONAR}     css=button.like-button
-${URL_LOGIN_CONTEM}      src/assets/pages/login.php
-${INDICADOR_LOGIN}       css=input[id="email"]
-${TEMPO_ESPERA}          10s
+${BROWSER}    Chrome
+${URL_BASE}    http://localhost/PetMap/PROJETO/
+${BOTAO_IMPULSIONAR}    css=button.like-button
+${URL_LOGIN_CONTEM}    src/assets/pages/login.php
+${INDICADOR_LOGIN}    css=input[id="email"]
+${TEMPO_ESPERA}    10s
 
 *** Keywords ***
 Abrir Navegador

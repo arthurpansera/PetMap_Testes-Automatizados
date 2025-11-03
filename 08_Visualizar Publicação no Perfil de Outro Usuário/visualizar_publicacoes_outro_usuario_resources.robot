@@ -18,6 +18,8 @@ Abrir Navegador
 Acessar Página Principal
     Go To    ${URL_BASE}
     Wait Until Page Contains Element    ${BARRA_PESQUISA}    timeout=${TEMPO_ESPERA}
+    Capture Page Screenshot
+
 
 Inserir Nome Na Barra De Pesquisa
     [Arguments]    ${nome_usuario}
@@ -31,6 +33,8 @@ Selecionar Usuario Da Lista
     Wait Until Element Is Visible    ${ITEM_SUGESTAO}    timeout=${TEMPO_ESPERA}
     Click Element    ${ITEM_SUGESTAO}
     Wait Until Page Contains Element    ${AREA_PUBLICACOES}    timeout=${TEMPO_ESPERA}
+    Capture Page Screenshot
+
 
 Rolar Ate As Publicacoes
     Scroll Element Into View    ${AREA_PUBLICACOES}

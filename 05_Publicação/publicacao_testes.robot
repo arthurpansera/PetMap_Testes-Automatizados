@@ -6,7 +6,7 @@ Test Teardown     Fechar o navegador
 
 *** Test Cases ***
 
-CT10 - Editar o título de uma publicação existente
+CT10 - Editar o título após ter realizado a publicação
     [Documentation]    Teste para verificar o comportamento do sistema ao tentar editar o título de uma publicação existente.
     [Tags]    editar_titulo_publicacao
     Realizar login
@@ -16,16 +16,7 @@ CT10 - Editar o título de uma publicação existente
     Clicar No Botao Salvar Alteracoes
     Verificar Edicao Do Titulo Com Sucesso    Novo título automatizado
     
-CT12 - Excluir uma publicação
-    [Documentation]   Teste para verificar o comportamento do sistema ao tentar excluir uma publicação existente.
-    [Tags]    excluir_publicacao_existente
-    Realizar login
-    Acessar Pagina De Perfil
-    Clicar No Botao Excluir De Alguma Publicacao
-    Clicar No Botao Sim Excluir
-    Verificar Exclusao Da Publicacao
-    
-CT14 - Não adicionar foto à publicação
+CT13 - Não adicionar foto à publicação
     [Documentation]  Teste para verificar o comportamento do sistema ao tentar publicar um caso sem adicionar uma foto.  
     [Tags]    publicar_sem_foto
     Realizar login
@@ -35,3 +26,13 @@ CT14 - Não adicionar foto à publicação
     Preencher o formulário da publicação sem inserir foto
     Clicar No Botao Publicar Para Envio
     Verificar Que Sistema Registrou Publicacao
+
+CT12 - Excluir uma publicação
+    [Documentation]   Teste para verificar o comportamento do sistema ao tentar excluir uma publicação existente.
+    [Tags]    excluir_publicacao_existente
+    Realizar login
+    Acessar Pagina De Perfil
+    Clicar No Botao Excluir De Alguma Publicacao
+    Clicar No Botao Sim Excluir
+    Verificar Exclusao Da Publicacao
+    

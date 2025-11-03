@@ -43,15 +43,18 @@ Realizar login
     Wait Until Element Is Visible    ${EMAIL_INPUT}    timeout=10s
     Input Text    ${EMAIL_INPUT}    ${EMAIL_CONTA}
     Input Text    ${PASSWORD_INPUT}    ${SENHA_CONTA}
+    Capture Page Screenshot
     Click Element    ${BOTAO_LOGIN}
 
 Usuário acessa a página principal
     Wait Until Element Is Visible    ${BOTAO_NOVA_PUBLICACAO}    timeout=10s
     Log To Console    Usuário está na página principal
+    Capture Page Screenshot
 
 Clicar no botão de realizar publicação no canto inferior direito
     Click Element    ${BOTAO_NOVA_PUBLICACAO}
     Sleep    2s
+    Capture Page Screenshot
 
 Preencher o formulário da publicação
     Wait Until Page Contains Element    ${INPUT_TITULO}    timeout=10s
@@ -62,6 +65,7 @@ Preencher o formulário da publicação
     Input Text    ${INPUT_BAIRRO}    ${BAIRRO_VALOR}
     Input Text    ${INPUT_CIDADE}    ${CIDADE_VALOR}
     Select From List By Value    ${SELECT_ESTADO}    PR
+    Capture Page Screenshot
 
 Clicar no botão Publicar
     Click Element    ${BOTAO_PUBLICAR}
@@ -72,21 +76,25 @@ O sistema exibe o formulário de nova publicação
     Page Should Contain Element    ${INPUT_CONTEUDO}
     Page Should Contain Element    ${SELECT_TIPO}
     Log To Console    Formulário de publicação exibido com sucesso
+    Capture Page Screenshot
 
 O sistema aceita as informações inseridas
     Sleep    1s
     Log To Console    Sistema processando informações
+    Capture Page Screenshot
 
 O sistema registra a publicação
     Wait Until Element Is Visible    ${ALERTA_SUCESSO}    timeout=10s
     ${mensagem}=    Get Text    ${ALERTA_SUCESSO}
     Log To Console    Mensagem exibida: ${mensagem}
     Should Contain    ${mensagem}    ${MENSAGEM_SUCESSO}    ignore_case=True
+    Capture Page Screenshot
 
 Deve ser exibida uma mensagem de sucesso e o sistema deve manter o usuário na página principal
     Click Element    ${BOTAO_OK_SWEET}
     Wait Until Element Is Visible    ${BOTAO_NOVA_PUBLICACAO}    timeout=10s
     Log To Console    Usuário retornou para a página principal após publicação
+    Capture Page Screenshot
 
 Fechar o navegador
     Close Browser

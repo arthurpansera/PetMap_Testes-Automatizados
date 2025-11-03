@@ -5,7 +5,7 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT09 - Manter publicação de caso de animal perdido
+CT09 - Realizar publicação de caso de animal perdido
     [Documentation]    Teste do fluxo completo de publicação de animal perdido
     [Tags]    publicacao_animal_perdido
     Realizar login

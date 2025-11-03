@@ -11,8 +11,8 @@ ${BOTAO_LOGIN}    css=input.login-btn
 ${EMAIL_CONTA}    maria@gmail.com
 ${SENHA_CONTA}    maria@1234
 
-${BOTAO_IMPULSIONAR}        css=button.like-button
-${TEMPO_ESPERA}             10s
+${BOTAO_IMPULSIONAR}    css=button.like-button
+${TEMPO_ESPERA}    10s
 
 *** Keywords ***
 Abrir Navegador

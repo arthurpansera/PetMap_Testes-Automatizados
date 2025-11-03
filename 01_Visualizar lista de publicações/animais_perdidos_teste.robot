@@ -5,7 +5,7 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT20 - Acessar página de animais perdidos e verificar mensagem de ausência de publicações
+CT20 - Visualizar página "Animais Perdidos" sem publicações
     [Documentation]    Verifica se a página "Animais Perdidos" é acessada corretamente e exibe a mensagem "Não há publicações disponíveis".
     [Tags]    acessar_animais_perdidos
     Acessar página principal

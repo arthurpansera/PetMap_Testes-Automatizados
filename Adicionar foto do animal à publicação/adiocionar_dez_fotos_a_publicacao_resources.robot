@@ -45,11 +45,13 @@ Realizar login
     Input Text    ${EMAIL_INPUT}    ${EMAIL_CONTA}
     Input Text    ${PASSWORD_INPUT}    ${SENHA_CONTA}
     Click Element    ${BOTAO_LOGIN}
+    Capture Page Screenshot
 
 Clicar no botão de realizar publicação
     Wait Until Element Is Visible    ${BOTAO_NOVA_PUBLICACAO}    timeout=10s
     Click Element    ${BOTAO_NOVA_PUBLICACAO}
     Sleep    2s
+    Capture Page Screenshot
 
 Preencher o formulário da publicação CT14
     Wait Until Page Contains Element    ${INPUT_TITULO}    timeout=10s
@@ -60,6 +62,7 @@ Preencher o formulário da publicação CT14
     Input Text    ${INPUT_BAIRRO}    ${BAIRRO_VALOR}
     Input Text    ${INPUT_CIDADE}    ${CIDADE_VALOR}
     Select From List By Value    ${SELECT_ESTADO}    PR
+    Capture Page Screenshot
 
 Adicionar 10 fotos à publicação
     [Documentation]    Tenta adicionar 10 fotos para validar o limite de 8
@@ -72,6 +75,7 @@ Adicionar 10 fotos à publicação
         Sleep    0.5s
         ${contador}=    Evaluate    ${contador} + 1
     END
+    Capture Page Screenshot
 
 Verificar se o limite de fotos foi respeitado
     [Documentation]    Verifica se o SweetAlert foi exibido e contém o texto correto
@@ -80,6 +84,7 @@ Verificar se o limite de fotos foi respeitado
     Log To Console    Mensagem exibida: ${mensagem}
     Should Contain    ${mensagem}    ${MENSAGEM_ESPERADA}
     Click Element    ${BOTAO_OK_SWEET}
+    Capture Page Screenshot
 
 Fechar o navegador
     Close Browser

@@ -3,37 +3,37 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 
 *** Variables ***
-${BROWSER}                  Chrome
-${URL}                      http://localhost/PetMap/PROJETO/
-${BOTAO_ENTRAR}             css=a.btn
-${EMAIL_INPUT}              id=email
-${PASSWORD_INPUT}           id=password
-${BOTAO_LOGIN}              css=input.login-btn
-${EMAIL_CONTA}              maria@gmail.com
-${SENHA_CONTA}              maria@1234
+${BROWSER}    Chrome
+${URL}    http://localhost/PetMap/PROJETO/
+${BOTAO_ENTRAR}    css=a.btn
+${EMAIL_INPUT}    id=email
+${PASSWORD_INPUT}    id=password
+${BOTAO_LOGIN}    css=input.login-btn
+${EMAIL_CONTA}    maria@gmail.com
+${SENHA_CONTA}    maria@1234
 
 ${BOTAO_NOVA_PUBLICACAO}    css=button.floating-button
-${INPUT_TITULO}             id=titulo
-${INPUT_CONTEUDO}           id=conteudo
-${SELECT_TIPO}              id=tipo_publicacao
-${INPUT_RUA}                id=endereco_rua
-${INPUT_BAIRRO}             id=endereco_bairro
-${INPUT_CIDADE}             id=endereco_cidade
-${SELECT_ESTADO}            id=state
-${BOTAO_PUBLICAR}           css=button.create-post
+${INPUT_TITULO}    id=titulo
+${INPUT_CONTEUDO}    id=conteudo
+${SELECT_TIPO}    id=tipo_publicacao
+${INPUT_RUA}    id=endereco_rua
+${INPUT_BAIRRO}    id=endereco_bairro
+${INPUT_CIDADE}    id=endereco_cidade
+${SELECT_ESTADO}    id=state
+${BOTAO_PUBLICAR}    css=button.create-post
 
-${INPUT_FOTOS}              id=foto_publicacao
-${ALERTA_SWEET}             css=.swal2-html-container
-${BOTAO_OK_SWEET}           css=button.swal2-confirm
+${INPUT_FOTOS}    id=foto_publicacao
+${ALERTA_SWEET}    css=.swal2-html-container
+${BOTAO_OK_SWEET}    css=button.swal2-confirm
 ${MENSAGEM_ESPERADA_INVALIDO}    Apenas imagens JPEG, JPG e PNG são permitidas.
 
-${TITULO_VALOR}             Teste arquivo inválido
-${CONTEUDO_VALOR}           Tentando adicionar um arquivo não suportado.
-${RUA_VALOR}                Rua das Flores
-${BAIRRO_VALOR}             Centro
-${CIDADE_VALOR}             Curitiba
+${TITULO_VALOR}    Teste arquivo inválido
+${CONTEUDO_VALOR}    Tentando adicionar um arquivo não suportado.
+${RUA_VALOR}    Rua das Flores
+${BAIRRO_VALOR}    Centro
+${CIDADE_VALOR}    Curitiba
 
-${ARQUIVO_INVALIDO}         ${EXECDIR}/Adicionar foto do animal à publicação/Arquivos/TXT-TESTE.txt
+${ARQUIVO_INVALIDO}    ${EXECDIR}/Adicionar foto do animal à publicação/Arquivos/TXT-TESTE.txt
 
 *** Keywords ***
 Abrir o navegador
@@ -47,11 +47,15 @@ Realizar login
     Input Text    ${EMAIL_INPUT}    ${EMAIL_CONTA}
     Input Text    ${PASSWORD_INPUT}    ${SENHA_CONTA}
     Click Element    ${BOTAO_LOGIN}
+    Capture Page Screenshot
+
 
 Clicar no botão de realizar publicação
     Wait Until Element Is Visible    ${BOTAO_NOVA_PUBLICACAO}    timeout=10s
     Click Element    ${BOTAO_NOVA_PUBLICACAO}
     Sleep    1s
+    Capture Page Screenshot
+
 
 Preencher o formulário da publicação
     Wait Until Element Is Visible    ${INPUT_TITULO}    timeout=10s
@@ -62,10 +66,14 @@ Preencher o formulário da publicação
     Input Text    ${INPUT_BAIRRO}    ${BAIRRO_VALOR}
     Input Text    ${INPUT_CIDADE}    ${CIDADE_VALOR}
     Select From List By Value    ${SELECT_ESTADO}    PR
+    Capture Page Screenshot
+
 
 Tentar adicionar arquivo inválido
     [Documentation]    Tenta enviar um arquivo que não é imagem
     Choose File    ${INPUT_FOTOS}    ${ARQUIVO_INVALIDO}
+    Capture Page Screenshot
+
 
 Verificar mensagem de erro de arquivo inválido
     [Documentation]    Verifica se a mensagem de erro foi exibida
@@ -74,6 +82,8 @@ Verificar mensagem de erro de arquivo inválido
     Log To Console    Mensagem exibida: ${mensagem}
     Should Contain    ${mensagem}    ${MENSAGEM_ESPERADA_INVALIDO}
     Click Element    ${BOTAO_OK_SWEET}
+    Capture Page Screenshot
+
 
 Fechar o navegador
     Close Browser

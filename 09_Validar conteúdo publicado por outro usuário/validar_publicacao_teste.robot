@@ -5,7 +5,7 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT31 - Validar publicação de usuário como moderador
+CT31 - Validar uma publicação realizada por outro usuário
     [Documentation]    Testa o fluxo completo de validação de publicação por um moderador
     [Tags]    validar_publicacao_moderador
     Realizar login como moderador

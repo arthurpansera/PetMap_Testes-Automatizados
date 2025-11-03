@@ -5,7 +5,7 @@ Test Setup    Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT29 - Banir usuário como moderador
+CT29 - Banir um usuário
     [Documentation]    Testa o fluxo completo de banimento de usuário por um moderador
     [Tags]    banir_usuario_moderador
     Realizar login como moderador
